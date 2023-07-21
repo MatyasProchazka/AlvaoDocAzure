@@ -9,7 +9,7 @@ namespace AlvaoDocAzure
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            await UseMongoDB(askQuestion: true, useOpenAI: true, insertArticles: false, collectionName: "DocCs11-2", language: "cs", readFromDatabase: false, dropDatabase: false);
+            await UseMongoDB(askQuestion: true, useOpenAI: true, insertArticles: false, collectionName: "DocEn11-1", language: "en", readFromDatabase: false, dropDatabase: false);
 
 
 

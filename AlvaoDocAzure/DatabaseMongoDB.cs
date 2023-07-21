@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Microsoft.CognitiveServices.Speech;
+using Microsoft.CognitiveServices.Speech.Audio;
 
 
 namespace AlvaoDocAzure
@@ -161,13 +163,35 @@ namespace AlvaoDocAzure
             string previousAnswer = "";
             string answer = "";
             bool askQuestion = true;
+            bool useVoice = true;
+            string question = "";
+
+            string speechKey = "92eb8fd7302f4e1d83c568eabc5d1d83";
+            string speechRegion = "westeurope";
+
+            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
+            speechConfig.SpeechRecognitionLanguage = "en-US";
+
+            using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
+            using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
 
             while (askQuestion)
             {
                 if (language == "en") { Console.WriteLine("Question:"); }
                 else if (language == "cs") { Console.WriteLine("Otázka:"); }
                 
-                string? question = Console.ReadLine();
+                if (useVoice)
+                {
+                    Console.WriteLine("Speak into your microphone.");
+                    var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
+                    question = OutputSpeechRecognitionResult(speechRecognitionResult);
+                    Console.WriteLine(question);
+                }
+                else
+                {
+                    question = Console.ReadLine();
+                }
+                
                 if (question != null && question != "quit")
                 {
                     var answers = await MakeVectorSearchAsync(question);
@@ -199,12 +223,27 @@ namespace AlvaoDocAzure
                             Console.WriteLine("------------------");
                         }
                     }
+                    if (useVoice) { Console.ReadKey(); }
                 }
                 else
                 {
                     askQuestion = false;
                 }
             }
+        }
+        private string OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+        {
+            switch (speechRecognitionResult.Reason)
+            {
+                case ResultReason.RecognizedSpeech:
+                    return speechRecognitionResult.Text;
+                case ResultReason.NoMatch:
+                    return "Speech could not be recognized.";
+                case ResultReason.Canceled:
+                    var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+                    return "CANCELED: Reason={cancellation.Reason";
+            }
+            return string.Empty;
         }
     }
 }
