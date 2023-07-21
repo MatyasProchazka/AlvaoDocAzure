@@ -1,0 +1,1257 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4FDCCA6-27DB-4043-8BA0-3AA21162078B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocEn</RootNamespace>
+    <AssemblyName>DocEn</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0-preview1\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="alvao-asset-management\console.aspx" />
+    <Content Include="alvao-asset-management\contract-management.aspx" />
+    <Content Include="alvao-asset-management.aspx" />
+    <Content Include="alvao-asset-management\documents.aspx" />
+    <Content Include="alvao-asset-management\documents\invoices.aspx" />
+    <Content Include="alvao-asset-management\documents\links-between-objects-and-documents.aspx" />
+    <Content Include="alvao-asset-management\documents\sequences.aspx" />
+    <Content Include="alvao-asset-management\documents\transfer-protocols.aspx" />
+    <Content Include="alvao-asset-management\glossary.aspx" />
+    <Content Include="alvao-asset-management\glossary\Inh.gif" />
+    <Content Include="alvao-asset-management\glossary\Root.gif" />
+    <Content Include="alvao-asset-management\glossary\Subtree.gif" />
+    <Content Include="alvao-asset-management\glossary\Tree.gif" />
+    <Content Include="alvao-asset-management\implementation\architecture\img\am-architecture.png" />
+    <Content Include="alvao-asset-management\implementation\analytic-database.aspx" />
+    <Content Include="alvao-asset-management\implementation\architecture.aspx" />
+    <Content Include="alvao-asset-management\implementation\artur.jpg" />
+    <Content Include="alvao-asset-management\implementation\audit-log.aspx" />
+    <Content Include="alvao-asset-management\implementation\cloud.gif" />
+    <Content Include="alvao-asset-management\implementation\cloud.png" />
+    <Content Include="alvao-asset-management\implementation\commands.aspx" />
+    <Content Include="alvao-asset-management\implementation\computer-set-template.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\alvao-api.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\database.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\aad-provisioning-scim\am-import-users.sql" />
+    <Content Include="alvao-asset-management\implementation\users\authentication.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\aad.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\aad\provisioning\object-attribute-mapping.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\aad\provisioning\person-attribute-mapping.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad\import-ad.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\alvao.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\attribute_mapping.png" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\mappings.png" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\settings_scope.png" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\text_connection.png" />
+    <Content Include="alvao-asset-management\implementation\users\start-chat-in-ms-teams.aspx" />
+    <Content Include="alvao-asset-management\searching\database-sql\samples.aspx" />
+    <Content Include="alvao-asset-management\searching\power_bi_installation.png" />
+    <Content Include="alvao-asset-management\software-management\licenses\import-from-m365.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\hr.aspx" />
+    <Content Include="App_Data\database.html" />
+    <Content Include="alvao-asset-management\implementation\customization\new-ticket-custom-form.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\reports\html.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\reports.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\reports\rep.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\reports\rep-modify.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\scripting.aspx" />
+    <Content Include="alvao-asset-management\implementation\customization\xml-export-objects.aspx" />
+    <Content Include="alvao-asset-management\implementation\database-backup.aspx" />
+    <Content Include="alvao-asset-management\implementation.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\agent.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\blacklist-hw.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\collector.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\collector_icon.png" />
+    <Content Include="alvao-asset-management\implementation\detection\custom-detection-way.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\detection-way.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\firewall.aspx" />
+    <Content Include="alvao-asset-management\implementation\detection\go.jpg" />
+    <Content Include="alvao-asset-management\implementation\detection\GoNetScan.jpg" />
+    <Content Include="alvao-asset-management\implementation\detection\sample_pc39.png" />
+    <Content Include="alvao-asset-management\implementation\exceeded-license.aspx" />
+    <Content Include="alvao-asset-management\implementation\farm1.gif" />
+    <Content Include="alvao-asset-management\implementation\farm1.png" />
+    <Content Include="alvao-asset-management\implementation\farm2.gif" />
+    <Content Include="alvao-asset-management\implementation\farm2.png" />
+    <Content Include="alvao-asset-management\implementation\fpc1.gif" />
+    <Content Include="alvao-asset-management\implementation\fpc1.png" />
+    <Content Include="alvao-asset-management\implementation\insert-computers.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\app_wizard.png" />
+    <Content Include="alvao-asset-management\implementation\installation\connection-string-samples.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\database-deploy.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\gp-distribution.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\iis_pool_1.PNG" />
+    <Content Include="alvao-asset-management\implementation\installation\iis_pool_2.PNG" />
+    <Content Include="alvao-asset-management\implementation\installation\iis_pool_3.PNG" />
+    <Content Include="alvao-asset-management\implementation\installation\iis_pool_4.PNG" />
+    <Content Include="alvao-asset-management\implementation\installation\iis_pool_5.PNG" />
+    <Content Include="alvao-asset-management\implementation\installation\installation-server-manual.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\maintenance.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\msi-distribution.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\multitenant.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\own-iis-apppool.aspx" />
+    <Content Include="alvao-asset-management\implementation\installation\web-service.aspx" />
+    <Content Include="alvao-asset-management\implementation\maintenance-reports.aspx" />
+    <Content Include="alvao-asset-management\implementation\maintenance-reports\installation.aspx" />
+    <Content Include="alvao-asset-management\implementation\multi-languages.aspx" />
+    <Content Include="alvao-asset-management\implementation\node-class.aspx" />
+    <Content Include="alvao-asset-management\implementation\object-models.aspx" />
+    <Content Include="alvao-asset-management\implementation\object-properties.aspx" />
+    <Content Include="alvao-asset-management\implementation\object-property-change-type.aspx" />
+    <Content Include="alvao-asset-management\implementation\object-templates.aspx" />
+    <Content Include="alvao-asset-management\implementation\periodic-alerts.aspx" />
+    <Content Include="alvao-asset-management\implementation\property-categories.aspx" />
+    <Content Include="alvao-asset-management\implementation\recaptcha.aspx" />
+    <Content Include="alvao-asset-management\implementation\requirements.aspx" />
+    <Content Include="alvao-asset-management\implementation\settings.aspx" />
+    <Content Include="alvao-asset-management\implementation\statistics.aspx" />
+    <Content Include="alvao-asset-management\implementation\supported-languages.aspx" />
+    <Content Include="alvao-asset-management\implementation\tree-design.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad\ad-object-property-mapping.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad\ad-trusted-domains.aspx" />
+    <Content Include="alvao-asset-management\implementation\users.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\default-profile.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\groups.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\alvao\import-users-csv.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad\name-template.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\permissions.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\security-audit.aspx" />
+    <Content Include="alvao-asset-management\implementation\users\authentication\ad\tblADMap.png" />
+    <Content Include="alvao-asset-management\import-export-data.aspx" />
+    <Content Include="alvao-asset-management\import-export-data\export-util.aspx" />
+    <Content Include="alvao-asset-management\import-export-data\import-util.aspx" />
+    <Content Include="alvao-asset-management\license.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\additional-props-at-child-object-tab.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\company_tree.png" />
+    <Content Include="alvao-asset-management\objects-and-properties\copying-object.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\functions.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\inserting-object-in-tree.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\material-warehouse.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\moving-object.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\object-access-rights.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\object-properties.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\object-title.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\permission_table_rules.gif" />
+    <Content Include="alvao-asset-management\objects-and-properties\phone_manager_tree.png" />
+    <Content Include="alvao-asset-management\objects-and-properties\property-inheritance.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\property-security.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\removing-object.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\sampledb.png" />
+    <Content Include="alvao-asset-management\objects-and-properties\sampledb2.png" />
+    <Content Include="alvao-asset-management\objects-and-properties\scrapped-asset.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\setting-up-new-sequence.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\stock-property.aspx" />
+    <Content Include="alvao-asset-management\objects-and-properties\tree_soucet1.png" />
+    <Content Include="alvao-asset-management\objects-and-properties\tree_soucet2.png" />
+    <Content Include="alvao-asset-management\object-log.aspx" />
+    <Content Include="alvao-asset-management\object-notes.aspx" />
+    <Content Include="alvao-asset-management\searching\database-sql.aspx" />
+    <Content Include="alvao-asset-management\searching\data-analysis.aspx" />
+    <Content Include="alvao-asset-management\searching.aspx" />
+    <Content Include="alvao-asset-management\searching\list-of-objects.aspx" />
+    <Content Include="alvao-asset-management\searching\looking-up-objects.aspx" />
+    <Content Include="alvao-asset-management\searching\power-bi.aspx" />
+    <Content Include="alvao-asset-management\searching\query.aspx" />
+    <Content Include="alvao-asset-management\software-management\custom-swlib.aspx" />
+    <Content Include="alvao-asset-management\software-management.aspx" />
+    <Content Include="alvao-asset-management\software-management\import-lic.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses-software-audit.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses\downgrade.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses\increase-decrease.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses\maintenance.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses\new.aspx" />
+    <Content Include="alvao-asset-management\software-management\licenses-links.aspx" />
+    <Content Include="alvao-asset-management\software-management\maintenance.aspx" />
+    <Content Include="alvao-asset-management\software-management\product-state.aspx" />
+    <Content Include="alvao-asset-management\software-management\sam_alert_icon.png" />
+    <Content Include="alvao-asset-management\software-management\software-detection.aspx" />
+    <Content Include="alvao-asset-management\software-management\software-profiles.aspx" />
+    <Content Include="alvao-asset-management\software-management\software-regular-auditing.aspx" />
+    <Content Include="alvao-asset-management\software-management\usage.aspx" />
+    <Content Include="alvao-asset-management\webApp.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\backup-profile.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\column-order.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\column-width-and-visibility.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\computer.png" />
+    <Content Include="alvao-asset-management\working-with-tables.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\filtering.png" />
+    <Content Include="alvao-asset-management\working-with-tables\grouping.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\pohledy.jpg" />
+    <Content Include="alvao-asset-management\working-with-tables\redraw-table.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\removing-values.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\shortcuts.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\sorting.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\status.png" />
+    <Content Include="alvao-asset-management\working-with-tables\tables-filtering.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\tables-searching.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\table-exporting-and-printing.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\table_values.png" />
+    <Content Include="alvao-asset-management\working-with-tables\table-views.aspx" />
+    <Content Include="alvao-asset-management\working-with-tables\views.PNG" />
+    <Content Include="alvao-service-desk.aspx" />
+    <Content Include="alvao-service-desk\evaluation-of-system-operation\data-analysis.aspx" />
+    <Content Include="alvao-service-desk\evaluation-of-system-operation.aspx" />
+    <Content Include="alvao-service-desk\evaluation-of-system-operation\power-bi.aspx" />
+    <Content Include="alvao-service-desk\implementation\architecture.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\appearance.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\custom-workflow.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\file-stream.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\links.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\request-link-type.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\request-priority.aspx" />
+    <Content Include="alvao-service-desk\implementation\customization\webapp-display-mode.aspx" />
+    <Content Include="alvao-service-desk\implementation\custom-items.aspx" />
+    <Content Include="alvao-service-desk\implementation\database-backup.aspx" />
+    <Content Include="alvao-service-desk\implementation.aspx" />
+    <Content Include="alvao-service-desk\implementation\html-text-style.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\installation-server-manual.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\iss_pool_6.png" />
+    <Content Include="alvao-service-desk\implementation\installation\iss_pool_7.png" />
+    <Content Include="alvao-service-desk\implementation\installation\iss_pool_8.png" />
+    <Content Include="alvao-service-desk\implementation\installation\iss_pool_9.png" />
+    <Content Include="alvao-service-desk\implementation\installation\alvao-service-settings.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\maintenance.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\multitenant.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\own-iis-apppool.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\url-rewrite.aspx" />
+    <Content Include="alvao-service-desk\implementation\installation\webapp-settings.aspx" />
+    <Content Include="alvao-service-desk\implementation\multi-languages.aspx" />
+    <Content Include="alvao-service-desk\implementation\requirements.aspx" />
+    <Content Include="alvao-service-desk\implementation\architecture\img\sd-architecture.png" />
+    <Content Include="alvao-service-desk\implementation\services.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\impact-urgency.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\knowledge-base.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\notifications.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\processes.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\processes\generating-process-diagram.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\processes\request-approval.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\service-roles.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\service-roles\multiple-teams-for-service.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\service-transfer.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\service-tree.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\sla.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\tile-color.aspx" />
+    <Content Include="alvao-service-desk\implementation\services\operating-hours.aspx" />
+    <Content Include="alvao-service-desk\implementation\sql-full-text-search.aspx" />
+    <Content Include="alvao-service-desk\implementation\supported-languages.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\companies.aspx" />
+    <Content Include="alvao-service-desk\implementation\users.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\deputy.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\groups.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\import-portraits-files.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\import-portraits-sharepoint.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\inactive-accounts.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\my-team.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\portraits.aspx" />
+    <Content Include="alvao-service-desk\implementation\users\sd-licenses.aspx" />
+    <Content Include="alvao-service-desk\knowledge-base.aspx" />
+    <Content Include="alvao-service-desk\license.aspx" />
+    <Content Include="alvao-service-desk\news.aspx" />
+    <Content Include="alvao-service-desk\requests\assign-to-solver.aspx" />
+    <Content Include="alvao-service-desk\requests\close-request.aspx" />
+    <Content Include="alvao-service-desk\requests\deadline.aspx" />
+    <Content Include="alvao-service-desk\requests.aspx" />
+    <Content Include="alvao-service-desk\requests\documentation-of-discussions-and-solutions.aspx" />
+    <Content Include="alvao-service-desk\requests\duplicated_duplicate.png" />
+    <Content Include="alvao-service-desk\requests\duplicated_duplicate_complex.png" />
+    <Content Include="alvao-service-desk\requests\duplicate-requests.aspx" />
+    <Content Include="alvao-service-desk\requests\find-in-alvao-asset.aspx" />
+    <Content Include="alvao-service-desk\requests\forward-message.aspx" />
+    <Content Include="alvao-service-desk\requests\forward-request.aspx" />
+    <Content Include="alvao-service-desk\requests\hdtlAfterDeadline.png" />
+    <Content Include="alvao-service-desk\requests\hdtlApproval.png" />
+    <Content Include="alvao-service-desk\requests\hdtlCloseToDeadline.png" />
+    <Content Include="alvao-service-desk\requests\hdtlNew.png" />
+    <Content Include="alvao-service-desk\requests\hdtlNoDeadline.png" />
+    <Content Include="alvao-service-desk\requests\hdtlResolved.png" />
+    <Content Include="alvao-service-desk\requests\hdtlSlaPaused.png" />
+    <Content Include="alvao-service-desk\requests\important-communication.aspx" />
+    <Content Include="alvao-service-desk\requests\import-messages-from-outlook.aspx" />
+    <Content Include="alvao-service-desk\requests\internal-records.aspx" />
+    <Content Include="alvao-service-desk\requests\internal-target.aspx" />
+    <Content Include="alvao-service-desk\requests\itil.png" />
+    <Content Include="alvao-service-desk\requests\minutes-from-other-communications.aspx" />
+    <Content Include="alvao-service-desk\requests\move-to-another-service.aspx" />
+    <Content Include="alvao-service-desk\requests\new-request.aspx" />
+    <Content Include="alvao-service-desk\requests\new-request-call-centre.aspx" />
+    <Content Include="alvao-service-desk\requests\new-request-manual.aspx" />
+    <Content Include="alvao-service-desk\requests\new-request-outlook.aspx" />
+    <Content Include="alvao-service-desk\requests\note.aspx" />
+    <Content Include="alvao-service-desk\requests\planning_requests.cs.png" />
+    <Content Include="alvao-service-desk\requests\planning_requests.en.png" />
+    <Content Include="alvao-service-desk\requests\previous_following.png" />
+    <Content Include="alvao-service-desk\requests\Priority1.png" />
+    <Content Include="alvao-service-desk\requests\Priority2.png" />
+    <Content Include="alvao-service-desk\requests\Priority4.png" />
+    <Content Include="alvao-service-desk\requests\Priority5.png" />
+    <Content Include="alvao-service-desk\requests\related.png" />
+    <Content Include="alvao-service-desk\requests\relations.aspx" />
+    <Content Include="alvao-service-desk\requests\removed.png" />
+    <Content Include="alvao-service-desk\requests\reopen-for-further-resolution.aspx" />
+    <Content Include="alvao-service-desk\requests\request-approval.aspx" />
+    <Content Include="alvao-service-desk\requests\request-removal.aspx" />
+    <Content Include="alvao-service-desk\requests\resolve-request.aspx" />
+    <Content Include="alvao-service-desk\requests\return-to-operator.aspx" />
+    <Content Include="alvao-service-desk\requests\SDMainWindow.png" />
+    <Content Include="alvao-service-desk\requests\send-answer.aspx" />
+    <Content Include="alvao-service-desk\requests\send-message.aspx" />
+    <Content Include="alvao-service-desk\requests\signatures.aspx" />
+    <Content Include="alvao-service-desk\requests\state-change.aspx" />
+    <Content Include="alvao-service-desk\requests\subscribers.aspx" />
+    <Content Include="alvao-service-desk\requests\superior_subordinated.png" />
+    <Content Include="alvao-service-desk\requests\ticket-templates.aspx" />
+    <Content Include="alvao-service-desk\requests\unread-events.aspx" />
+    <Content Include="alvao-service-desk\requests\update_default_message_for_approver.sql" />
+    <Content Include="alvao-service-desk\requests\wait-for-response.aspx" />
+    <Content Include="alvao-service-desk\requests\work-time.aspx" />
+    <Content Include="alvao-service-desk\request-object-links.aspx" />
+    <Content Include="alvao-service-desk\webApp.aspx" />
+    <Content Include="alvao-service-desk\working-with-tables.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="insider-preview.aspx" />
+    <Content Include="itil\change-management.aspx" />
+    <Content Include="itil.aspx" />
+    <Content Include="itil\identity-management.aspx" />
+    <Content Include="itil\incident-management.aspx" />
+    <Content Include="itil\problem-management.aspx" />
+    <Content Include="itil\relations.aspx" />
+    <Content Include="itil\relations\itil.png" />
+    <Content Include="itil\request-fulfilment.aspx" />
+    <Content Include="itil\sacm.aspx" />
+    <Content Include="itil\sacm\object_tree.png" />
+    <Content Include="itil\sacm\object_tree_lifecycle.png" />
+    <Content Include="itil\sacm\status_lifecycle.png" />
+    <Content Include="itil\sam.aspx" />
+    <Content Include="itil\service-catalog-management.aspx" />
+    <Content Include="itil\service-catalog-management\SDWA - Katalog EN.PNG" />
+    <Content Include="itil\service-catalog-management\service-levels.aspx" />
+    <Content Include="itil\service-desk.aspx" />
+    <Content Include="itil\service-desk\service_desk_channels.png" />
+    <Content Include="list-of-windows\alvao-asset-management-agent.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent\settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent\settings\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent\settings\tcp-ip.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent\settings\web-service.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent-setup.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-agent-setup\settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector\actions.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector\actions\HIDD-OPTGENERALPP.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector\detections.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector\help.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-collector\network-searching.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\add-objects-to-ticket.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\admin-tools.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\assign-licenses.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\assign-licenses-per-core.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\change-quantity.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\computer-name.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\date-time.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\detection\detection-setup.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\detection\detection-way.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\detection\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\detection\scope.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\find.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-computer.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-computers.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-object.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-object\existing-object.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-object\object-samples.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\new-object\object-template.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\note.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\object\choose-icon.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\object.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\object\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\object\software-profile.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\edit\object\software-profile-exeptions.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\choose-new-language.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\db-manager.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\db-modify.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\open-existing-database.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\print.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\file\query-parameters.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\go-to.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\help\about.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\help.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\InstInst.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\InstUninst.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicIn.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicInInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicInItem.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicInItemInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicOut.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicOutItem.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicRelLeft.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\LicRelRight.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\link-edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\add-result.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\choose-object.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\confirm-move.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\retrieve-objects-ad.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\unify-objects.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\unique.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object\use-feature.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\object-tree.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query-wizard-1.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query-wizard-2.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query-wizard-3.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query-wizard-4.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\query-wizard-5.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\query\set-column.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\alter-installation.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\detected.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-installation.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-installation\next.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-installation\products.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-installation\shared-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-installation\trial-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\installation-registry\record-uninstallation.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\auto-assign-license-settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\documents.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\items.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\links.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\log.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\media.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\open-attachment.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\other.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\edit-license\substitute-products.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\license-upgrade.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license\documents-media.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license\item.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license\items.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license\license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\new-license\other.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\void-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\edit\void-license\documents.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\object-list.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\tools.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-registry\view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions\allocate-license.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions\computers.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions\license-cover.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions\special-installation.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\actions\users.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\alternative-sw.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\audit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\product-state.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\table\color.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\table.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\table\find.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\table\font.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\table\html-document.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\tools.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\license-and-install-overview\view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\product.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\product\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\product\other.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\product\package-components.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\product\system.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\products\substitute.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\load-library-1.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\load-library-2.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\load-library-3.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\save-library-1.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\save-library-2.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\software\sw-products-library\save-library-3.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare\compare-install-vs-detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare\compare-tree-vs-hw-detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare\components-identification.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare\settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\compare-detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\hardware.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\actions.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\file-general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\other.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\recognition-rule.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\reg-general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\tools.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\detection\detail\software\view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\diary.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\link.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\links.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\delete-options.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\move-options.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\PcOff.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\PcOn.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\PcUnknown.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\objects\shared-view-settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\alert.jpg" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\find.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\Prop.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\PropDetAd.png" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\property-edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\PropInh.jpg" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\prop_locked.jpg" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\properties\table-options.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\license-transfer.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\recognition.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\recognition\send-to-recognition-2.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\recognition\send-to-recognition-3.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwInstallation.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwInstallationInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwLic.png" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwLicOver.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwLicOverInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwNormal.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwOS.png" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwProfReq.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwProfReqInvalid.gif" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tab-view\software\SwReg.GIF" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\database.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\database\query.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\database\sql-query.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\detection.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\detection\file-path.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\detection\response.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\command.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\commands.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\documents.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\documents\document.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\documents\document-edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\documents\label.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\media.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\media\medium.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\media\medium-edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\node-class.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\node-classes.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\numeric-sequences.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\numeric-sequences\numeric-sequence.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\object-security.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\object-security\permission.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\organization.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\organization\organization.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\organization\organization-edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\organization\other.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\organization\replace.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\lists\properties-definition.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\login.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\barcode-reader.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\barcode-reader\object-prototype.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\action.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\Exclamation.png" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\file.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\file-reader.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\message-sending.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\property.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\stocktakings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\stocktakings\documents.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\stocktakings\edit.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\stocktakings\stocktaking.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\stocktaking\web-asset-check.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\password.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\password-new.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\settings.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\settings\display.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\settings\general.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\settings\language.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\tools\settings\restore.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\transfer-outer.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view\action.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view\list-of-objects.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view\query-results.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view\request-objects.aspx" />
+    <Content Include="list-of-windows\alvao-asset-management-console\view\search-results.aspx" />
+    <Content Include="list-of-windows\alvao-outlook-addin.aspx" />
+    <Content Include="list-of-windows\alvao-outlook-addin\options.aspx" />
+    <Content Include="list-of-windows\alvao-outlook-addin\password.aspx" />
+    <Content Include="list-of-windows\alvao-outlook-addin\task-pane.aspx" />
+    <Content Include="list-of-windows\alvao-outlook-addin\ticket-from-mail.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\activation-key.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\conclusion.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\database-backup.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\database-selection.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\first-steps.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\global-settings.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\install-location-selection.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\products-selection.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\settings-asset-management.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\installation\settings-webapp-and-rest-api.aspx" />
+    <Content Include="list-of-windows\alvao-server-setup\maintenance.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app\new.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app\scripts.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app\scripts\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications\app\scripts\new.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\applications.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\am-icons\icon.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\detect-profiles\create-profile.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\detect-profiles.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\detect-profiles\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\detect-profiles\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\document-folders.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\document-folders\document-folder.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\document-folders\document-folder\security-list.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\document-folders\document-folder\security-modify.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\link-types.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\link-types\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\link-types\new.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\print-report-templates.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\print-report-templates\edit-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\create-property.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\detail\security.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\detail\security\permission.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\detail\value-check.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\property-definitions\detail\value-list.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\create-server.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\detail\ip-range.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\detail\scan-network.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\servers\detail\settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\detection.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\electronic-handover-forms.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\electronic-handover-forms-message-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\general.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\identification.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\ms-sccm-connections.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\ms-sccm-connections\create-connection.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\ms-sccm-connections\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\sam-alerting.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\sam-alerting-message-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\web-asset-check.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\am-icons.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-licenses-security.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-licenses-security\item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\create-profile.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\detail\products.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\detail\products-products.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\software-profiles\detail\products-subprofiles.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\create-custom-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\detail\customitems-valuedial.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\detail\edit-customitems-valuedial.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\custom-items\detail\list-of-values.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query\permissions\add.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\database-maintenance.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\create-group.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\group-rights.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\members.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\membership.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\securityobject-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\security-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\select-groups.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\select-member.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\service-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\groups\detail\sla-sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\licenses\activation.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\licenses.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\organization\address.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\organization\create-organization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\organization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\organization\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\organization\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\periodic-alerts\create-periodic-alert.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\periodic-alerts.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\periodic-alerts\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\periodic-alerts\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme\create-approval-scheme.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme\detail\approval-scheme-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme\detail\approval-scheme-items.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\approval-scheme\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\create-process.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\request-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\request-items.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\approval-message-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\automatic-request-creation\add.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\automatic-request-creation\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\automatic-request-creation\edit\items-copying.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\behavior.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\automatic-request-creation.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\requester-notification-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\status-request\required-items.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\process\detail\workflow.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\roles-messages\create-roles-messages.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\roles-messages.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\roles-messages\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\roles-messages\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\catalog.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\create-service.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\edit-service-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\javascript.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\new-ticket-form-add-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\new-ticket-form-edit-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\new-ticket-form-new-item.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\new-ticket-items.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\rewrite-service-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\rewrite-sla-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\select-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\service-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\detail\sla-assignment.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\extended.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\icons.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\loading-messages.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\message-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\multi-edit\authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\multi-edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\multi-edit\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\multi-edit\sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\notification.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\objects.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\service\other.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\settings\general.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\settings\notification.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\settings\notification-style.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\create-sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\detail\notice.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\detail\notice-notice.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\sla\detail\sender.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\new-operating-hours.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail\exceptions-operating-hours.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail\exception-operating-hours.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail\working-hour.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\service-desk\operating-hours\detail\working-hours.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\activedirectory.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\add-language.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\analysis-db.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\authentication.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\insider-preview.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\language-and-time-zone.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\messaging.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\new-ip-range.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\password-policy.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\web-services.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\settings-check.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\settings\webapp.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\create-user.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\membership.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\outofoffice.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\password.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\securityobject-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\security-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\select-group.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\securityobject-authorization\select-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\service-authorization.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\settings-profile.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\sla-sla.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\users\detail\user-rights.aspx" />
+    <Content Include="list-of-windows\alvao-webapp.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\diary.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\diary\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\diary\event.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\document.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\document\add-link.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\document\add-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\document\add-license.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\new-document.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\document\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\documents\new-document\add-link.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\frame.png" />
+    <Content Include="list-of-windows\alvao-webapp\knowledge-base.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\knowledge-base\knowledge.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\knowledge-base\manage.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\knowledge-base\manage\edit-knowledge.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\knowledge-base\manage\new-knowledge.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\login.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\main.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\software.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\link.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\print\sign.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\print\preview.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\print.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\child-objects.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\upozorneni.jpg" />
+    <Content Include="list-of-windows\alvao-webapp\search\persons\person\asset.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\my-team.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\my-team\new-user.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\my-team\new-user-edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\current-news.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\manage.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\manage\edit-news.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\manage\new-news.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\manage\send-news.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\news\manage\send-to-all-tenants.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\export-xlsx.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\import-csv.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\new-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\add-request.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\diary.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\links-diagram.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\move.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\nactena_vlastnost.JPG" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\properties.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\related-tickets.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\zdedena_vlastnost.JPG" />
+    <Content Include="list-of-windows\alvao-webapp\requests.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\new-request.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\new-request-relations.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\add-object.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\approve-or-reject.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\assign-to-solver.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\deadline.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\edit-link.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\have-approved.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\merge-request.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\message.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\move-to-another-service.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\note.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\reopen.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\resolve.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\request\transit-to-state.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\requests\table-of-requests.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\search.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\search\persons.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\search\persons\person.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\service-catalog.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\custom-notification-settings\advanced-settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\custom-notification-settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\language.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\out-of-office.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\password.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\install-applications.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\settings-backup.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\signatures\add-signature.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\signatures.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\signatures\edit-signature.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\settings\view.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\ticket-templates.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\ticket-templates\edit-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\ticket-templates\new-template.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\ticket-templates\schedule-template.aspx" />
+    <Content Include="list-of-windows.aspx" />
+    <Content Include="list-of-windows\template-window.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications\templates.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications\object-custom-actions-by-object-move.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications\object-custom-actions-by-property-change.aspx" />
+    <Content Include="modules\alvao-am-custom-apps.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications\i-entity-command.aspx" />
+    <Content Include="modules\alvao-am-custom-apps\applications\i-entity-tab.aspx" />
+    <Content Include="modules\alvao-am-enterprise-api\specification.aspx" />
+    <Content Include="modules\alvao-am-enterprise-api\authentication.aspx" />
+    <Content Include="modules\alvao-configuration-management\change.png" />
+    <Content Include="modules\alvao-configuration-management\crit_incident.png" />
+    <Content Include="modules\alvao-configuration-management\incident.png" />
+    <Content Include="modules\alvao-configuration-management\linked_incident.png" />
+    <Content Include="modules\alvao-configuration-management\object-health.aspx" />
+    <Content Include="modules\alvao-configuration-management.aspx" />
+    <Content Include="modules\alvao-configuration-management\installation.aspx" />
+    <Content Include="modules\alvao-configuration-management\object-links.aspx" />
+    <Content Include="modules\alvao-configuration-management\ok.png" />
+    <Content Include="modules\alvao-configuration-management\visio.aspx" />
+    <Content Include="modules\alvao-am-enterprise-api.aspx" />
+    <Content Include="modules\alvao-azure-devops-connector.aspx" />
+    <Content Include="modules\alvao-electronic-handover-forms\sign-with-electronic-pen.aspx" />
+    <Content Include="modules\alvao-electronic-handover-forms\sign-via-web.aspx" />
+    <Content Include="modules\alvao-electronic-handover-forms\installation.aspx" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader.aspx" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\connect-to-computer.aspx" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\copy-files.aspx" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\devicelist.png" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\edit.png" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\filter.png" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\installation.aspx" />
+    <Content Include="modules\alvao-inventory-audits\barcode-reader\save.png" />
+    <Content Include="modules\alvao-inventory-audits\physical-asset-check.aspx" />
+    <Content Include="modules\alvao-inventory-audits\web-asset-check.aspx" />
+    <Content Include="modules\alvao-inventory-audits\installation.aspx" />
+    <Content Include="modules\alvao-inventory-audits\stocktaking.aspx" />
+    <Content Include="modules\alvao-microsoft-intune-connector.aspx" />
+    <Content Include="modules\alvao-sd-advanced-workflows.aspx" />
+    <Content Include="modules\alvao-electronic-handover-forms.aspx" />
+    <Content Include="modules\alvao-ms-sccm-connector\alvao-settings.aspx" />
+    <Content Include="modules\alvao-ms-sccm-connector.aspx" />
+    <Content Include="modules\alvao-ms-sccm-connector\installation.aspx" />
+    <Content Include="modules\alvao-ms-sccm-connector\sccm-settings.aspx" />
+    <Content Include="modules\alvao-outlook-addin.aspx" />
+    <Content Include="modules\alvao-outlook-addin\FindIcon.png" />
+    <Content Include="modules\alvao-outlook-addin\installation.aspx" />
+    <Content Include="modules\alvao-outlook-addin\menu.png" />
+    <Content Include="modules\alvao-outlook-addin\NewItem.png" />
+    <Content Include="modules\alvao-outlook-addin\NewWindow.png" />
+    <Content Include="modules\alvao-outlook-addin\Refresh.png" />
+    <Content Include="modules\alvao-sam-assistant.aspx" />
+    <Content Include="modules\alvao-sam-assistant\installation.aspx" />
+    <Content Include="modules\alvao-sam-assistant\sam-alerting.aspx" />
+    <Content Include="modules\alvao-sam-assistant\sam_alert_icon.png" />
+    <Content Include="modules\alvao-sam-assistant\sam-report.aspx" />
+    <Content Include="modules\alvao-satisfaction-feedback.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\custom-commands.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\custom-commands\general-custom-commands.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\custom-commands\ticket-custom-commands.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\periodic-custom-actions.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-actions-by-events.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-actions-by-events\ticket-approval-custom-actions.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-actions-by-events\mail-message-custom-actions.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-actions-by-events\act-custom-actions.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-actions-by-events\ticket-custom-actions.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\applications\ticket-custom-tabs.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\columns-control.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\custom-form-approval-template.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\custom-form-template.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\database-objects.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\database-person.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\database-service.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\javascript.aspx" />
+    <Content Include="modules\alvao-sd-custom-apps\ticket-person-read-custom-view.aspx" />
+    <Content Include="modules\alvao-sd-enterprise-api.aspx" />
+    <Content Include="modules\alvao-sd-enterprise-api\power-platform-custom-connector.aspx" />
+    <Content Include="modules\alvao-sd-enterprise-api\authentication.aspx" />
+    <Content Include="modules\alvao-sd-enterprise-api\specification.aspx" />
+    <Content Include="modules\alvao-standard-hwsw-request-forms.aspx" />
+    <Content Include="modules\alvao-teams-addin.aspx" />
+    <Content Include="modules\alvao-inventory-audits.aspx" />
+    <Content Include="modules.aspx" />
+    <Content Include="release-notes.aspx" />
+    <Content Include="release-notes\Denied_SLAs_T116209ALVAO.sql" />
+    <Content Include="release-notes\fixed-bugs.aspx" />
+    <Content Include="release-notes\img\aad-gallery.png" />
+    <Content Include="release-notes\img\admin-propertydefinitions.png" />
+    <Content Include="release-notes\img\ckeditor.png" />
+    <Content Include="release-notes\img\dataqueries-command.png" />
+    <Content Include="release-notes\img\dataqueries-table.png" />
+    <Content Include="release-notes\img\documents.png" />
+    <Content Include="release-notes\img\find-in-log.png" />
+    <Content Include="release-notes\img\handover-protocol-barcode.png" />
+    <Content Include="release-notes\img\main.png" />
+    <Content Include="release-notes\img\oa-not-saved-email.png" />
+    <Content Include="release-notes\img\oa-save-email.png" />
+    <Content Include="release-notes\img\object-addfile.png" />
+    <Content Include="release-notes\img\object-attachments.png" />
+    <Content Include="release-notes\img\object-custom-cmd-and-tab.png" />
+    <Content Include="release-notes\img\solving-process-kb.png" />
+    <Content Include="release-notes\img\start-chat.png" />
+    <Content Include="release-notes\img\teams-bot.png" />
+    <Content Include="release-notes\img\teams-create-request-form.png" />
+    <Content Include="release-notes\img\teams-create-request.png" />
+    <Content Include="release-notes\img\teams-notification.png" />
+    <Content Include="release-notes\img\user-status.png" />
+    <Content Include="release-notes\important.aspx" />
+    <Content Include="release-notes\new.aspx" />
+    <Content Include="release-notes\updates.aspx" />
+    <Content Include="sample-page.aspx" />
+    <Content Include="Scripts\misc.js" />
+    <Content Include="known-issues\attachment.aspx" />
+    <Content Include="known-issues.aspx" />
+    <Content Include="known-issues\troubleshooting.aspx" />
+    <Content Include="upgrade\customization-upgrade.aspx" />
+    <Content Include="upgrade.aspx" />
+    <Content Include="upgrade\test-environment.aspx" />
+    <Content Include="upgrade\upgrade.aspx" />
+    <Content Include="upgrade\upgrade-server-manual.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="_Content\Doc.css" />
+    <Content Include="_Content\fabric-icons-style.css" />
+    <Content Include="_Content\images\alc_logo.gif" />
+    <Content Include="_Content\images\alc_logo_old.gif" />
+    <Content Include="_Content\images\alvao-logo.svg" />
+    <Content Include="_Content\images\alvao.png" />
+    <Content Include="_Content\images\caution.png" />
+    <Content Include="_Content\images\collapse.png" />
+    <Content Include="_Content\images\expand.png" />
+    <Content Include="_Content\images\head_bg.png" />
+    <Content Include="_Content\images\important.png" />
+    <Content Include="_Content\images\noexpand.png" />
+    <Content Include="_Content\images\note.png" />
+    <Content Include="_Content\images\root.png" />
+    <Content Include="_Content\images\tip.png" />
+    <Content Include="_Content\images\up_arrow.png" />
+    <Content Include="_Content\images\warning.png" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="_Controls\ProblemListViewControl.ascx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query\edit.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query\permissions.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query\query.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\asset-management\settings\sw-products-library.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\asset-check.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\asset-check\note.aspx" />
+    <Content Include="alvao-asset-management\implementation\monitoring-app-health.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\data-queries.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\new.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query\query\execute.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\administration\data-queries\data-query.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\add-link.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\add-document.aspx" />
+    <Content Include="list-of-windows\alvao-webapp\objects\object\attachments.aspx" />
+    <Content Include="alvao-asset-management\software-management\licosoby.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Extension.cs" />
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doc.Master.cs">
+      <DependentUpon>doc.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doc.Master.designer.cs">
+      <DependentUpon>doc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sitemap.ashx.cs">
+      <DependentUpon>sitemap.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="known-issues\attachment.aspx.cs">
+      <DependentUpon>attachment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="known-issues\attachment.aspx.designer.cs">
+      <DependentUpon>attachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="known-issues.aspx.cs">
+      <DependentUpon>known-issues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="known-issues.aspx.designer.cs">
+      <DependentUpon>known-issues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_Controls\ProblemListViewControl.ascx.cs">
+      <DependentUpon>ProblemListViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Controls\ProblemListViewControl.ascx.designer.cs">
+      <DependentUpon>ProblemListViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="_Models\Database.cs" />
+    <Compile Include="_Models\Attachment.cs" />
+    <Compile Include="_Models\ProblemArticle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alvao-asset-management\default.sitemap" />
+    <Content Include="alvao-asset-management\implementation\detection\AMAgent.adml" />
+    <Content Include="alvao-asset-management\implementation\detection\AMAgent.admx" />
+    <Content Include="alvao-asset-management\implementation\detection\AMAgent_64b.adml" />
+    <Content Include="alvao-asset-management\implementation\detection\AMAgent_64b.admx" />
+    <Content Include="alvao-asset-management\implementation\installation\CollectorServiceControlScripts.zip" />
+    <Content Include="alvao-asset-management\implementation\renew_analysis.zip" />
+    <Content Include="alvao-asset-management\import-export-data\annexes\import.csv" />
+    <Content Include="alvao-asset-management\import-export-data\annexes\update_db.csv" />
+    <Content Include="alvao-service-desk\default.sitemap" />
+    <Content Include="doc.Master" />
+    <Content Include="doc.sitemap" />
+    <Content Include="itil\default.sitemap" />
+    <Content Include="list-of-windows\alvao-webapp\frame.docx" />
+    <Content Include="list-of-windows\default.sitemap" />
+    <Content Include="modules\default.sitemap" />
+    <Content Include="alvao-asset-management\License terms for the software product ALVAO Asset Management 11.1.pdf" />
+    <Content Include="alvao-asset-management\Licenční ujednání ALVAO Asset Management 11.1.pdf" />
+    <Content Include="alvao-service-desk\License terms for the software product ALVAO Service Desk 11.1.pdf" />
+    <Content Include="alvao-service-desk\Licenční ujednání ALVAO Service Desk 11.1.pdf" />
+    <Content Include="modules\alvao-sd-enterprise-api\ALVAO.PowerPlatform.CustomConnector.zip" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\alvaodoc - Web Deploy.pubxml" />
+    <Content Include="sitemap.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58167</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44374/en/11.1</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0-preview1\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0-preview1\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0-preview1\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0-preview1\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

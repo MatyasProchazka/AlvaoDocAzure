@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="~/" title="ALVAO 11.1">
+		<siteMapNode siteMapFile="alvao-asset-management/default.sitemap" />
+		<siteMapNode siteMapFile="alvao-service-desk/default.sitemap" />
+		<siteMapNode siteMapFile="modules/default.sitemap" />
+		<siteMapNode siteMapFile="itil/default.sitemap" />
+		<siteMapNode siteMapFile="list-of-windows/default.sitemap" />
+		<siteMapNode url="release-notes" title="Release notes" description="">
+			<siteMapNode url="release-notes/important" title="Important notices" description="">
+				<siteMapNode url="release-notes/important#common" title="Core features" description="" />
+				<siteMapNode url="release-notes/important#am" title="ALVAO Asset Management" description="" translate="no" />
+				<siteMapNode url="release-notes/important#sd" title="ALVAO Service Desk" description="" translate="no" />
+				<siteMapNode url="release-notes/important#extension_modules" title="Extension modules" description="" />
+			</siteMapNode>
+			<siteMapNode url="release-notes/new" title="New features and changes" description="">
+				<siteMapNode url="release-notes/new#common" title="Core features" description="" />
+				<siteMapNode url="release-notes/new#am" title="ALVAO Asset Management" description="" translate="no" />
+				<siteMapNode url="release-notes/new#sd" title="ALVAO Service Desk" description="" translate="no" />
+				<siteMapNode url="release-notes/new#extension_modules" title="Extension modules" description="" />
+			</siteMapNode>
+			<siteMapNode url="release-notes/fixed-bugs" title="Fixed issues" description="" />
+			<siteMapNode url="release-notes/updates" title="Released updates" description=""/>
+			<siteMapNode url="upgrade" title="Upgrade from previous versions" description="">
+				<siteMapNode url="upgrade/test-environment" title="Test environment" description="" />
+				<siteMapNode url="upgrade/upgrade-server-manual" title="ALVAO Server - manual upgrade" description="" />
+				<siteMapNode url="upgrade/customization-upgrade" title="Upgrade from ALVAO 11.0 – manual steps" description="" />
+			</siteMapNode>
+			<siteMapNode url="insider-preview" title="Insider Preview" description="" />
+		</siteMapNode>
+		<siteMapNode url="known-issues" title="Known issues" description=""/>
+	</siteMapNode>
+</siteMap>

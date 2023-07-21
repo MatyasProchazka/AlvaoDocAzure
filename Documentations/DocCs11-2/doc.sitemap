@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="~/" title="ALVAO 11.2 (vývojová verze)">
+		<siteMapNode siteMapFile="alvao-asset-management/default.sitemap" />
+		<siteMapNode siteMapFile="alvao-service-desk/default.sitemap" />
+		<siteMapNode siteMapFile="modules/default.sitemap" />
+		<siteMapNode siteMapFile="itil/default.sitemap" />
+		<siteMapNode siteMapFile="list-of-windows/default.sitemap" />
+		<siteMapNode url="release-notes" title="Release Notes" description="">
+			<siteMapNode url="release-notes/important" title="Důležitá upozornění" description="">
+				<siteMapNode url="release-notes/important#common" title="Společné pro všechny produkty ALVAO" description="" />
+				<siteMapNode url="release-notes/important#am" title="ALVAO Asset Management" description="" translate="no" />
+				<siteMapNode url="release-notes/important#sd" title="ALVAO Service Desk" description="" translate="no" />
+				<siteMapNode url="release-notes/important#extension_modules" title="Rozšiřující moduly" description="" />
+			</siteMapNode>
+			<siteMapNode url="release-notes/new" title="Nové funkce a změny" description="">
+				<siteMapNode url="release-notes/new#common" title="Společné pro všechny produkty ALVAO" description="" />
+				<siteMapNode url="release-notes/new#am" title="ALVAO Asset Management" description="" translate="no" />
+				<siteMapNode url="release-notes/new#sd" title="ALVAO Service Desk" description="" translate="no" />
+				<siteMapNode url="release-notes/new#extension_modules" title="Rozšiřující moduly" description="" />
+			</siteMapNode>
+			<siteMapNode url="release-notes/fixed-bugs" title="Odstraněné problémy" description="" />
+			<siteMapNode url="release-notes/updates" title="Vydané aktualizace" description=""/>
+			<siteMapNode url="upgrade" title="Upgrade z předchozí verze" description="">
+				<siteMapNode url="upgrade/test-environment" title="Testovací prostředí" description="" />
+				<siteMapNode url="upgrade/upgrade-server-manual" title="ALVAO Server - manuální upgrade" description="" />
+				<siteMapNode url="upgrade/customization-upgrade" title="Upgrade z ALVAO 11.0 - manuální kroky" description="" />
+			</siteMapNode>
+			<siteMapNode url="insider-preview" title="Insider Preview" description="" />
+		</siteMapNode>
+		<siteMapNode url="known-issues" title="Známé problémy" description=""/>
+	</siteMapNode>
+</siteMap>

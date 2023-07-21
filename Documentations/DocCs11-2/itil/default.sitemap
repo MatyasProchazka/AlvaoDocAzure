@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="itil" title="ITIL v praxi">
+		<siteMapNode url="itil/service-desk" title="Service Desk Setup" description=""></siteMapNode>
+		<siteMapNode url="itil/service-catalog-management" title="Správa katalogu služeb" description="" translate="no">
+			<siteMapNode url="itil/service-catalog-management/service-levels" title="Úrovně služeb" description="" translate="no"></siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="itil/incident-management" title="Incident Management" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/request-fulfilment" title="Request Fulfilment" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/change-management" title="Change Management" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/problem-management" title="Problem Management" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/relations" title="Relations" description=""></siteMapNode>
+		<siteMapNode url="itil/sacm" title="Service Asset and Configuration Management" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/sam" title="Software Asset Management" description="" translate="no"></siteMapNode>
+		<siteMapNode url="itil/identity-management" title="Identity Management" description="" translate="no"></siteMapNode>
+	</siteMapNode>
+</siteMap>

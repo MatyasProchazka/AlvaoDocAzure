@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+    <siteMapNode url="list-of-windows" title="Index of windows and commands" description="">
+
+        <!-- ALVAO Asset Management Agent -->
+        <siteMapNode url="list-of-windows/alvao-asset-management-agent" title="ALVAO Asset Management Agent" description="">
+            <siteMapNode url="list-of-windows/alvao-asset-management-agent/settings" title="Settings" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-agent/settings/general" title="General" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-agent/settings/web-service" title="Web service" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-agent/settings/tcp-ip" title="TCP/IP" description="" />
+            </siteMapNode>
+        </siteMapNode>
+
+        <!-- ALVAO Asset Management Agent Setup -->
+        <siteMapNode url="list-of-windows/alvao-asset-management-agent-setup" title="ALVAO Asset Management Agent Setup" description="">
+            <siteMapNode url="list-of-windows/alvao-asset-management-agent-setup/settings" title="Settings" description="" />
+        </siteMapNode>
+
+        <!-- ALVAO Asset Management Collector-->
+        <siteMapNode url="list-of-windows/alvao-asset-management-collector" title="ALVAO Asset Management Collector" description="">
+            <siteMapNode url="list-of-windows/alvao-asset-management-collector/actions" title="Action" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-collector/actions/hidd-optgeneralpp" title="Settings - General" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-asset-management-collector/detections" title="Detection" description="" />
+            <siteMapNode url="list-of-windows/alvao-asset-management-collector/network-searching" title="Network scan" description="" />
+            <siteMapNode url="list-of-windows/alvao-asset-management-collector/help" title="Help" description="" />
+        </siteMapNode>
+
+        <!-- ALVAO Asset Management Console -->
+        <siteMapNode url="list-of-windows/alvao-asset-management-console" title="ALVAO Asset Management Console" description="">
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/object-tree" title="Object tree" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/computer-name" title="New computer name" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/add-objects-to-ticket" title="Add objects to request" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/change-quantity" title="Change quantity" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/admin-tools" title="Administrator Tools" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view" title="View Tabs" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/properties" title="Properties" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/properties/property-edit" title="Property" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/properties/table-options" title="Table" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/properties/find" title="Find" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/links" title="Links" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/link" title="Add/Edit Link" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/objects" title="Child objects" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/objects/edit" title="Changing property value" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/objects/move-options" title="Moving options" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/objects/delete-options" title="Removal options" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/objects/shared-view-settings" title="Sharing settings" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/software" title="Software" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/software/recognition" title="Send SW for identification" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/software/recognition/send-to-recognition-2" title="Send SW for identification - step 2 of 3" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/software/recognition/send-to-recognition-3" title="Send SW for identification - last step" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/software/license-transfer" title="Move licence" description="" />
+                </siteMapNode>
+
+
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection" title="Detection" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail" title="Detection details" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software" title="Software detection detail" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/edit" title="Edit" description="" >
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/recognition-rule" title="File/Register Recognition Rule" description="" >
+                                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/file-general" title="File Recognition Rule - General" description="" />
+                                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/reg-general" title="Modifying the Registry Recognition Rule - General" description="" />
+                                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/other" title="Other" description="" />
+                                </siteMapNode>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/view" title="View" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/actions" title="Actions" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/software/tools" title="Tools" description="" />
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/detail/hardware" title="Hardware Detection Detail" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare" title="Compare detections to Asset Registry" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare/compare-install-vs-detection" title="Installation registry vs. Software detection" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare/compare-tree-vs-hw-detection" title="Hardware detection vs. Tree" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare/components-identification" title="Identifiable components" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare/settings" title="Settings" description="" />
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/detection/compare-detection" title="Hardware detection vs. Tree" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tab-view/diary" title="Log" description="" >
+                </siteMapNode>
+            </siteMapNode>
+            <!-- File -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/file" title="File" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/file/db-manager" title="Database Manager" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/file/db-modify" title="Edit" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/file/open-existing-database" title="Open existing database" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/file/choose-new-language" title="Database language" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/file/print" title="Print" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/file/query-parameters" title="Query parameters" description="" />
+            </siteMapNode>
+            <!-- Edit -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/edit" title="Edit" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-object" title="New object - select a sample object" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-object/object-samples" title="Object samples" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-object/existing-object" title="Existing objects" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-object/object-template" title="Object templates" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-computer" title="New computer" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/new-computers" title="New computers" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/note" title="Note" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/object" title="Object" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/object/general" title="General" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/object/choose-icon" title="Select icon" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/object/software-profile" title="Software Profile" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/object/software-profile-exeptions" title="Software profile exceptions for this computer" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/detection" title="New detection" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/detection/general" title="General" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/detection/scope" title="Scope" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/detection/detection-way" title="Detection method" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/detection/detection-setup" title="Detection setup" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/edit/find" title="Find" description="" />
+            </siteMapNode>
+            <!-- View -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/view" title="View" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/view/search-results" title="Found objects" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/view/action" title="Action" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/view/query-results" title="Query results" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/view/list-of-objects" title="Lists of objects" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/view/request-objects" title="Request - Objects" description="" />
+            </siteMapNode>
+            <!-- GoTo -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/go-to" title="Go To" description="" />
+            <!-- Object -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/object" title="Object" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/object/use-feature" title="Use function" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/object/add-result" title="Sum of values" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/object/choose-object" title="Select object" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/object/unique" title="Uniqueness violation" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/object/unify-objects" title="Unify objects" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/object/retrieve-objects-ad" title="Load objects from Active Directory" description="" />
+            </siteMapNode>
+            <!-- Query -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/query" title="Query" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query" title="Query" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query-wizard-1" title="Query Wizard - Step 1" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query-wizard-2" title="Query Wizard - Step 2" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query-wizard-3" title="Query Wizard - Step 3" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/query/set-column" title="Column" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query-wizard-4" title="Query Wizard - Step 4" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/query/query-wizard-5" title="Query Wizard - Step 5" description="" />
+                </siteMapNode>
+            </siteMapNode>
+            <!-- SW -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/software" title="Software" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview" title="License and Installation Overview" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/view" title="View" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/table" title="Table" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/table/find" title="Find" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/table/html-document" title="Print report" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/table/font" title="Font" description="" >
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/table/color" title="Colour" description="" />
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions" title="Actions" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions/allocate-license" title="Licensing" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions/license-cover" title="License coverage" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions/computers" title="Computer - select an item" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions/users" title="Users - select an item" description="" />
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/actions/special-installation" title="Special product installation" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/tools" title="Tools" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/audit" title="Audit" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/alternative-sw" title="Set up alternative approved software" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-and-install-overview/product-state" title="Product status" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry" title="License registry" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/object-list" title="Objects" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit" title="Edit" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license" title="New license - product" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license/license" title="New license - license" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license/other" title="New license - other" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license/items" title="New license - license items" description="" >
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license/item" title="License Item" description="" />
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/new-license/documents-media" title="New license - documents and media" description="" />
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/license-upgrade" title="Upgrade license - license" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/auto-assign-license-settings" title="Setting Automatic License Allocation" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/void-license" title="License voiding - licenses" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/void-license/documents" title="License voiding - Documents" description="" />
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license" title="Edit" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/general" title="General" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/other" title="Other" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/items" title="License items" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/documents" title="Documents" description="" >
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/open-attachment" title="Attachments" description="" />
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/media" title="Media" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/links" title="Links" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/substitute-products" title="Substitute products" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/edit/edit-license/log" title="Log" description="" />
+
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/view" title="View" description="" >
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/license-registry/tools" title="Tools" description="" >
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry" title="Installation registry" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-installation" title="New installations - computers" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-installation/products" title="New installation - products" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-installation/shared-license" title="New installation - shared license" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-installation/trial-license" title="New installation - trial installation" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-installation/next" title="New installation - next" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/record-uninstallation" title="Record uninstallation" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/alter-installation" title="Edit" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/general" title="General" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/installation-registry/detected" title="Detected" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library" title="Library of SW products" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/load-library-1" title="Loading software products library - step 1" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/load-library-2" title="Loading software products library - step 2" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/load-library-3" title="Loading software products library - step 3" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/save-library-1" title="Save custom software product library - step 1" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/save-library-2" title="Save custom software product library - step 2" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/sw-products-library/save-library-3" title="Save custom software product library - step 3" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products" title="Products" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/product" title="Product" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/product/general" title="General" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/product/other" title="Other" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/product/package-components" title="Package components" description="" />
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/product/system" title="System" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/software/products/substitute" title="Replace user-defined products" description="" />
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- Assign Licences -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/assign-licenses" title="Assign licenses" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/assign-licenses-per-core" title="Assign licenses per-core" description="" />
+            </siteMapNode>
+            <!-- Tools -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools" title="Tools" description="">
+
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists" title="Lists" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/properties-definition" title="Property definitions" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/object-security" title="Object security" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/object-security/permission" title="Permissions" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/node-classes" title="Kinds of objects" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/node-class" title="Object kind" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/numeric-sequences" title="Numeric sequences" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/numeric-sequences/numeric-sequence" title="New numeric sequence" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/commands" title="Commands" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/command" title="Command" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/organization" title="Organization" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/organization/organization-edit" title="Organization" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/organization/organization" title="Organization" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/organization/other" title="Other" description="" />
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/organization/replace" title="Replace user companies" description="" />
+                    </siteMapNode>
+                    <!--TROUBLE -->
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/documents" title="Documents" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/documents/document-edit" title="Document" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/documents/label" title="Label" description="" />
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/documents/document" title="Document" description="" />
+                        </siteMapNode>
+                    </siteMapNode>
+                    <!--TROUBLE -->
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/media" title="Media" description="" >
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/media/medium-edit" title="New media" description="" >
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/lists/media/medium" title="Media" description="" />
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/detection" title="Manual detection files" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/detection/file-path" title="Enter path" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/detection/response" title="Answer" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/database" title="Database" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/database/sql-query" title="SQL query" description="">
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/database/query" title="Query" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/password" title="Password" description="" >
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/password-new" title="New password" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/login" title="Login" description="" />
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking" title="Asset check" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/file" title="File" description="">
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/stocktakings" title="Asset check list" description="">
+                            <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/stocktakings/edit" title="Edit" description="">
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/stocktakings/stocktaking" title="Asset check" description="" />
+                                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/stocktakings/documents" title="Documents" description="" />
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/edit" title="Edit" description="">
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/property" title="Assets" description="" />
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/view" title="View" description="">
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/action" title="Action" description="">
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/file-reader" title="Reader file" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/web-asset-check" title="Web asset check" description="">
+                        <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/stocktaking/message-sending" title="Send notification" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/barcode-reader" title="Barcode Reader Manager" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/barcode-reader/object-prototype" title="Object selection" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/settings" title="Settings" description="">
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/settings/display" title="View" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/settings/general" title="General" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/settings/language" title="Language" description="" />
+                    <siteMapNode url="list-of-windows/alvao-asset-management-console/tools/settings/restore" title="Settings backup" description="" />
+                </siteMapNode>
+            </siteMapNode>
+            <!-- Help -->
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/help" title="Help" description="">
+                <siteMapNode url="list-of-windows/alvao-asset-management-console/help/about" title="About" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-asset-management-console/date-time" title="Date and time" description="" />
+        </siteMapNode>
+
+        <!-- ALVAO Outlook Add-in -->
+        <siteMapNode url="list-of-windows/alvao-outlook-addin" title="ALVAO Outlook Add-in">
+            <siteMapNode url="list-of-windows/alvao-outlook-addin/task-pane" title="ALVAO Task Panel" />
+
+            <siteMapNode url="list-of-windows/alvao-outlook-addin/options" title="ALVAO Add-in settings">
+                <siteMapNode url="list-of-windows/alvao-outlook-addin/password" title="Enter password" />
+            </siteMapNode>
+        </siteMapNode>
+
+        <!-- ALVAO Server Setup -->
+        <siteMapNode url="list-of-windows/alvao-server-setup" title="ALVAO Server Setup" description="">
+            <siteMapNode url="list-of-windows/alvao-server-setup/installation" title="Installation" description="">
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/database-selection" title="Database selection" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/database-backup" title="Database back-up" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/activation-key" title="Activation key" description="">
+                    <siteMapNode url="list-of-windows/alvao-server-setup/installation/products-selection" title="Products selection" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/install-location-selection" title="Installation location" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/global-settings" title="Installation settings" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/settings-webapp-and-rest-api" title="Installation Settings - WebApp and REST API" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/settings-asset-management" title="Installation Settings - Asset Management" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/first-steps" title="First steps" description="" />
+                <siteMapNode url="list-of-windows/alvao-server-setup/installation/conclusion" title="Conclusion" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-server-setup/maintenance" title="Maintenance" description="" />
+        </siteMapNode>
+
+        <!-- ALVAO webapp -->
+        <siteMapNode url="list-of-windows/alvao-webapp" title="ALVAO WebApp" description="">
+            <!-- ALVAO webapp Login -->
+            <siteMapNode url="list-of-windows/alvao-webapp/login" title="Login" description=""/>
+            <!-- ALVAO webapp Main -->
+            <siteMapNode url="list-of-windows/alvao-webapp/main" title="Home page" description=""/>
+            <!-- ALVAO webapp Search -->
+            <siteMapNode url="list-of-windows/alvao-webapp/search" title="Search" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/search/persons" title="Persons found" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/search/persons/person" title="Person" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/search/persons/person/asset" title="Asset" description="" />
+                    </siteMapNode>
+                </siteMapNode>
+            </siteMapNode>
+            <!-- ALVAO webapp Requests -->
+            <siteMapNode url="list-of-windows/alvao-webapp/requests" title="Requests" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/requests/new-request" title="New request" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/requests/table-of-requests" title="Requests list" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/requests/request" title="Request" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/have-approved" title="Begin approval" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/new-request-relations" title="Request" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/note" title="Note" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/assign-to-solver" title="Assign" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/transit-to-state" title="Transit to status" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/move-to-another-service" title="Move to another service" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/add-object" title="Add object" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/edit-link" title="Add/edit-link" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/approve-or-reject" title="Approve or reject" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/merge-request" title="Merge requests" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/deadline" title="Due date" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/edit" title="Edit" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/resolve" title="Resolve" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/reopen" title="Reopen" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/requests/request/message" title="Message" description=""/>
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- ALVAO webapp Service catalog -->
+            <siteMapNode url="list-of-windows/alvao-webapp/service-catalog" title="Service catalogue" description=""/>
+
+            <!-- ALVAO webapp Objects -->
+            <siteMapNode url="list-of-windows/alvao-webapp/objects" title="Objects" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/objects/new-object" title="New object" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/objects/import-csv" title="Import CSV" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/objects/object" title="Object" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/move" title="Move object" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/print" title="Print" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/objects/object/print/preview" title="Preview" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/objects/object/print/sign" title="Sign" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/links-diagram" title="Diagram of links" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/objects/object/link" title="Link" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/properties" title="Properties" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/child-objects" title="Child objects" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/software" title="Software" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/related-tickets" title="Related requests" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/objects/object/add-request" title="Add request" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/attachments" title="Attachments" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/objects/object/add-link" title="Add link" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/objects/object/add-document" title="Add document" description=""/>
+                    </siteMapNode>
+                    
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/objects/object/diary" title="Log" description=""/>
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- ALVAO webapp Knowledge base -->
+            <siteMapNode url="list-of-windows/alvao-webapp/knowledge-base" title="Knowledge base" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/knowledge-base/knowledge" title="Knowledge" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/knowledge-base/manage" title="Manage" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/knowledge-base/manage/new-knowledge" title="New knowledge" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/knowledge-base/manage/edit-knowledge" title="Edit knowledge" description=""/>
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- ALVAO webapp News -->
+            <siteMapNode url="list-of-windows/alvao-webapp/news" title="Current News" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/news/current-news" title="Current news" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/news/manage" title="Manage" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/news/manage/new-news" title="New message" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/news/manage/edit-news" title="Edit" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/news/manage/send-news" title="Send a message by e-mail" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/news/manage/send-to-all-tenants" title="Email message to all tenants" description=""/>
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- ALVAO webapp Documents -->
+            <siteMapNode url="list-of-windows/alvao-webapp/documents" title="Documents" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/documents/new-document" title="New document" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/documents/new-document/add-link" title="Add link" description=""/>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/documents/document" title="Document" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/documents/document/add-license" title="Add license" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/documents/document/add-link" title="Add link" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/documents/document/add-object" title="Add object" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/documents/document/edit" title="Edit" description=""/>
+                </siteMapNode>
+            </siteMapNode>
+
+            <!-- ALVAO webapp Data queries -->
+            <siteMapNode url="list-of-windows/alvao-webapp/data-queries" title="Data queries" description=""/>
+
+            <!-- ALVAO webapp Diary -->
+            <siteMapNode url="list-of-windows/alvao-webapp/diary" title="Log" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/diary/event" title="Event" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/diary/edit" title="Edit" description=""/>
+            </siteMapNode>
+
+
+            <!-- ALVAO webapp Asset check -->
+            <siteMapNode url="list-of-windows/alvao-webapp/asset-check" title="Asset check" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/asset-check/note" title="Edit message" description=""/>
+            </siteMapNode>
+
+
+            <!-- ALVAO webapp Ticket templates -->
+            <siteMapNode url="list-of-windows/alvao-webapp/ticket-templates" title="Request templates" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/ticket-templates/new-template" title="New template" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/ticket-templates/edit-template" title="Edit" description=""/>
+                <siteMapNode url="list-of-windows/alvao-webapp/ticket-templates/schedule-template" title="Schedule" description=""/>
+            </siteMapNode>
+
+            <!-- ALVAO webapp Administration -->
+            <siteMapNode url="list-of-windows/alvao-webapp/administration" title="Administration" description="">
+                <!-- ALVAO webapp Users -->
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/users" title="Users" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/users/create-user" title="New user" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail" title="User" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/edit" title="Edit" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/membership" title="Membership in groups" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/select-group" title="Add membership" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/user-rights" title="Permissions" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/service-authorization" title="Add permissions" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/sla" title="SLA" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/sla-sla" title="SLA assignment" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/security-object" title="Object security" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/securityobject-authorization" title="Object Security - Permissions" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/securityobject-authorization/select-object" title="Select object" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/outofoffice" title="Set person as Out of office (absent)" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/settings-profile" title="Set profile" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/users/detail/password" title="Change password" description=""/>
+                    </siteMapNode>
+                </siteMapNode>
+                <!-- ALVAO webapp Groups -->
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/groups" title="Groups" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/create-group" title="New group" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail" title="Group" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/edit" title="Edit" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/members" title="Members" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/select-member" title="Add member" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/membership" title="Group Membership" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/select-groups" title="Add membership" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/group-rights" title="Permissions" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/service-authorization" title="Add permissions" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/sla" title="SLA" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/sla-sla" title="SLA assignment" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/security-object" title="Object security" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/groups/detail/securityobject-authorization" title="Object Security - Permissions" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+
+                <!-- ALVAO webapp AM -->
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management" title="Asset Management" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions" title="Property definitions" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/create-property" title="New property" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/detail" title="Property definition" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/detail/value-list" title="Value list" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/detail/value-check" title="Value check" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/detail/security" title="Security" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/property-definitions/detail/security/permission" title="Permission" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/print-report-templates" title="Print report templates" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/print-report-templates/edit-template" title="Edit" description=""/>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/detect-profiles" title="Detection Profiles" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/detect-profiles/create-profile" title="New detection profile" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/detect-profiles/detail" title="Detection profile" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/detect-profiles/detail/edit" title="Edit" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/document-folders" title="Document folders" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/document-folders/document-folder" title="Document Folder" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/document-folders/document-folder/security-list" title="Security" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/document-folders/document-folder/security-modify" title="Document Folder - permissions" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers" title="Servers (deprecated)" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/create-server" title="New server" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/detail" title="Server" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/detail/scan-network" title="Network scan" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/detail/ip-range" title="IP address range" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/servers/detail/settings" title="Settings" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-licenses-security" title="Software License Security" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-licenses-security/item" title="Software License Security - Permissions" description="">
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/am-icons" title="Object icons" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/am-icons/icon" title="Object icon" description="">
+                        </siteMapNode>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles" title="Software profiles" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/create-profile" title="New profile" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/detail" title="Software profile" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/detail/products" title="Products" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/detail/products-products" title="Add product" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/software-profiles/detail/products-subprofiles" title="Subprofiles" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/link-types" title="Types of links between objects" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/link-types/new" title="New link type" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/link-types/edit" title="Edit" description=""/>
+                    </siteMapNode>
+
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings" title="Settings" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/general" title="General" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/detection" title="Detection" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/sw-products-library" title="SW products library" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/identification" title="Computer identification" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/ms-sccm-connections" title="MS SCCM Connections" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/ms-sccm-connections/create-connection" title="New connection" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/ms-sccm-connections/edit" title="Edit connection" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/sam-alerting" title="SAM - notification" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/sam-alerting-message-template" title="Message template" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/electronic-handover-forms" title="Signing documents via the web" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/electronic-handover-forms-message-template" title="Message template" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/asset-management/settings/web-asset-check" title="Web inventory" description=""/>
+                    </siteMapNode>
+                </siteMapNode>
+
+                <!-- ALVAO webapp SD -->
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk" title="Service Desk" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service" title="Services" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/create-service" title="New service" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/catalog" title="Service catalog" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/icons" title="Select an icon" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/objects" title="Objects" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/loading-messages" title="Loading messages" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/extended" title="Extended" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/notification" title="Notification" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/message-template" title="Message template" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/other" title="Other" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail" title="Service" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/new-ticket-items" title="Request form" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/new-ticket-form-add-item" title="Add item" description="">
+                                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/new-ticket-form-new-item" title="New item" description=""/>
+                                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/new-ticket-form-edit-item" title="Edit" description=""/>
+                                </siteMapNode>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/select-template" title="Default request template" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/javascript" title="Javascript" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/authorization" title="Permissions" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/service-authorization" title="Add permissions" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/rewrite-service-authorization" title="Overwrite permissions" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/edit-service-authorization" title="Edit permissions" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/sla" title="SLA" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/sla-assignment" title="SLA assignment" description=""/>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/detail/rewrite-sla-authorization" title="Overwrite SLA" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/multi-edit" title="Bulk editing" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/multi-edit/edit" title="Edit (bulk)" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/multi-edit/authorization" title="Overwrite permissions" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/service/multi-edit/sla" title="Overwrite SLA" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla" title="SLA" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/create-sla" title="New SLA" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/detail" title="SLA" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/detail/notice" title="Alert rules" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/detail/notice-notice" title="Notification rule" description="">
+                                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/sla/detail/sender" title="Sender" description=""/>
+                                </siteMapNode>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process" title="Processes" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/create-process" title="New process" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail" title="Process" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/request-items" title="Request items" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/request-item" title="Request item" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/workflow" title="Solution progress" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request" title="New request status" description="">
+                                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/required-items" title="Required items" description=""/>
+                                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/behavior" title="Checking" description="">
+                                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/approval-message-template" title="Message template for approvers" description=""/>
+                                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/requester-notification-template" title="Template of notifications to requester about the change of status" description=""/>
+                                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/automatic-request-creation" title="Automatic request creation" description="">
+                                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/automatic-request-creation/add" title="New rule" description=""/>
+                                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/automatic-request-creation/edit" title="Edit" description="">
+                                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/automatic-request-creation/edit/items-copying" title="Copied items" description=""/>
+                                            </siteMapNode>
+                                        </siteMapNode>
+                                    </siteMapNode>
+                                </siteMapNode>
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/process/detail/status-request/edit" title="Edit" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours" title="Operating hours" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/new-operating-hours" title="New operating hours" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail" title="Operating hours" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail/working-hours" title="Intervals for operating hours" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail/working-hour" title="Interval of operating time" description=""/>
+                            </siteMapNode>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail/exceptions-operating-hours" title="Exceptions for operating hours" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/operating-hours/detail/exception-operating-hours" title="Exception for operating hours" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme" title="Approval schemes" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme/create-approval-scheme" title="New approval scheme" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme/detail" title="Approval scheme" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme/detail/edit" title="Edit" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme/detail/approval-scheme-items" title="Approval Steps" description="">
+                                <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/approval-scheme/detail/approval-scheme-item" title="Approval Step" description=""/>
+                            </siteMapNode>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/roles-messages" title="Incoming message rules" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/roles-messages/create-roles-messages" title="New rule" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/roles-messages/detail" title="Rule" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/roles-messages/detail/edit" title="Edit" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/settings" title="Settings" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/settings/general" title="General" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/settings/notification" title="Notification" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/service-desk/settings/notification-style" title="Notification styles" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/organization" title="Organizations" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/organization/create-organization" title="New organization" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/organization/address" title="Address" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/organization/detail" title="Organization" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/organization/detail/edit" title="Edit" description=""/>
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items" title="Custom fields" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/create-custom-item" title="New custom field" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/detail" title="Custom field" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/detail/edit" title="Edit" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/detail/list-of-values" title="List of values" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/detail/customitems-valuedial" title="New value" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/custom-items/detail/edit-customitems-valuedial" title="Edit" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/applications" title="Applications" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app/new" title="New application" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app" title="Applications" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app/edit" title="Edit" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app/scripts" title="Scripts" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app/scripts/new" title="New script" description=""/>
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/applications/app/scripts/edit" title="Edit" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries" title="Data queries" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/new" title="New data query" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query" title="Data query" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query/edit" title="Edit" description=""/>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query/query" title="Query" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query/query/execute" title="Execute" description=""/>
+                        </siteMapNode>
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query/permissions" title="Permissions" description="">
+                            <siteMapNode url="list-of-windows/alvao-webapp/administration/data-queries/data-query/permissions/add" title="Add permission" description=""/>
+                        </siteMapNode>
+                    </siteMapNode>
+                </siteMapNode>
+
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/periodic-alerts" title="Periodic alerts" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/periodic-alerts/create-periodic-alert" title="New periodic alert" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/periodic-alerts/detail" title="Periodic alert" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/periodic-alerts/detail/edit" title="Edit" description=""/>
+                    </siteMapNode>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/settings" title="Settings" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/messaging" title="Sending messages" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/webapp" title="WebApp" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/web-services" title="Web services" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/authentication" title="Integrated authentication" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/new-ip-range" title="IP address range" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/activedirectory" title="Active Directory and Azure Active Directory" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/password-policy" title="Password rules" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/analysis-db" title="Data analysis" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/language-and-time-zone" title="Languages and time zone" description="">
+                        <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/add-language" title="Select your language" description=""/>
+                    </siteMapNode>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/insider-preview" title="Insider Preview" description=""/>
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/settings/settings-check" title="Configuration check" description=""/>
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/licenses" title="License" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/administration/licenses/activation" title="Insert activation key" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/administration/database-maintenance" title="Database maintenance" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-webapp/my-team" title="My team" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/my-team/new-user" title="New user" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/my-team/new-user-edit" title="Edit" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-webapp/settings" title="Settings" description="">
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/language" title="Language and time zone" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/view" title="View" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/out-of-office" title="Absence" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/custom-notification-settings" title="Notifications" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/settings/custom-notification-settings/advanced-settings" title="Advanced notification settings" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/signatures" title="Signatures" description="">
+                    <siteMapNode url="list-of-windows/alvao-webapp/settings/signatures/add-signature" title="New signature" description="" />
+                    <siteMapNode url="list-of-windows/alvao-webapp/settings/signatures/edit-signature" title="Edit signature" description="" />
+                </siteMapNode>
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/settings-backup" title="Backup settings" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/install-applications" title="Install applications" description="" />
+                <siteMapNode url="list-of-windows/alvao-webapp/settings/password" title="Change password" description="" />
+            </siteMapNode>
+            <siteMapNode url="list-of-windows/alvao-webapp/objects/export-xlsx" title="Export XLSX" description="" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

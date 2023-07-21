@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="alvao-service-desk" title="ALVAO Service Desk" description="">
+		<siteMapNode url="alvao-service-desk/implementation" title="System implementation in the organization" description="">
+			<siteMapNode url="alvao-service-desk/implementation/architecture" title="System architecture" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/requirements" title="Technical requirements" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/supported-languages" title="Supported languages" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/sql-full-text-search" title="Full-Text Search" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/installation" title="Installation" description="">
+				<siteMapNode url="alvao-service-desk/implementation/installation/installation-server-manual" title="ALVAO Server - manual installation" description="">
+					<siteMapNode url="alvao-service-desk/implementation/installation/own-iis-apppool" title="Creating a pool for ALVAO WebApp on IIS server" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/installation/alvao-service-settings" title="Alvao Service component settings" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/installation/webapp-settings" title="WebApp settings" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/installation/url-rewrite" title="Redirect from HTTP to HTTPS using IIS URL Rewrite" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-service-desk/implementation/installation/multitenant" title="Multitenant mode" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/installation/maintenance" title="Database maintenance" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-service-desk/implementation/database-backup" title="Database backup" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/users" title="User management" description="">
+				<siteMapNode url="alvao-service-desk/implementation/users/groups" title="User groups" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/users/portraits" title="User portraits" description="">
+					<siteMapNode url="alvao-service-desk/implementation/users/import-portraits-files" title="Import user portraits from files" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/users/import-portraits-sharepoint" title="Import user portraits from SharePoint server" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-service-desk/implementation/users/deputy" title="User representative" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/users/companies" title="Organization" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/users/inactive-accounts" title="Inactive user accounts" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/users/sd-licenses" title="ALVAO Service Desk license" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/users/my-team" title="My team" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-service-desk/implementation/services" title="Services" description="">
+				<siteMapNode url="alvao-service-desk/implementation/services/operating-hours" title="Operating hours" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/services/sla" title="SLA" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/services/knowledge-base" title="Knowledge base" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/services/processes" title="Processes" description="">
+					<siteMapNode url="alvao-service-desk/implementation/services/processes/request-approval" title="Request Approval" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/services/processes/generating-process-diagram" title="GenerateProcessDiagram" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-service-desk/implementation/services/service-tree" title="Service tree" description="">
+					<siteMapNode url="alvao-service-desk/implementation/services/service-roles" title="User roles in requests and services" description="">
+						<siteMapNode url="alvao-service-desk/implementation/services/service-roles/multiple-teams-for-service" title="Requester groups" description=""/>
+					</siteMapNode>
+					<siteMapNode url="alvao-service-desk/implementation/services/notifications" title="Notifications" description="" />
+					<siteMapNode url="alvao-service-desk/implementation/services/tile-color" title="Recommended service tile colors" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-service-desk/implementation/services/impact-urgency" title="Impact and urgency" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/services/service-transfer" title="Service transfer" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/services/hr" title="Employee Management" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-service-desk/implementation/custom-items" title="Custom fields" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/html-text-style" title="Formatted text font" description="" />
+			<siteMapNode url="alvao-service-desk/implementation/multi-languages" title="Multilingual environment" description=""/>
+			<siteMapNode url="alvao-service-desk/implementation/customization" title="Customizations and extensions" description="">
+				<siteMapNode url="alvao-service-desk/implementation/customization/appearance" title="Custom appearance" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/request-priority" title="Request priority" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/request-link-type" title="Types of links between requests" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/webapp-display-mode" title="ALVAO WebApp display mode" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/custom-workflow" title="Custom workflow" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/links" title="Custom links in menus" description="" />
+				<siteMapNode url="alvao-service-desk/implementation/customization/file-stream" title="Saving attachments outside the database" description="" />
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="alvao-service-desk/webapp" title="ALVAO WebApp" description="" />
+		<siteMapNode url="alvao-service-desk/working-with-tables" title="Working with tables" description=""/>
+		<siteMapNode url="alvao-service-desk/requests" title="Requests" description="">
+			<siteMapNode url="alvao-service-desk/requests/new-request" title="Request creation" description="">
+				<siteMapNode url="alvao-service-desk/requests/new-request-outlook" title="Loading the request from MS Outlook" description="" />
+				<siteMapNode url="alvao-service-desk/requests/new-request-manual" title="Manual request creation" description="" />
+				<siteMapNode url="alvao-service-desk/requests/new-request-call-centre" title="PBX" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-service-desk/requests/relations" title="Links between requests" description="" />
+			<siteMapNode url="alvao-service-desk/requests/assign-to-solver" title="Assigning a request to a solver" description="" />
+			<siteMapNode url="alvao-service-desk/requests/deadline" title="Setting a response or resolution time" description="" />
+			<siteMapNode url="alvao-service-desk/requests/internal-target" title="Setting internal request deadlines" description="" />
+			<siteMapNode url="alvao-service-desk/requests/documentation-of-discussions-and-solutions" title="Documentation of communications and solutions" description="">
+				<siteMapNode url="alvao-service-desk/requests/send-message" title="Sending a message" description="">
+					<siteMapNode url="alvao-service-desk/requests/signatures" title="Signatures" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-service-desk/requests/send-answer" title="Send response" description="" />
+				<siteMapNode url="alvao-service-desk/requests/forward-message" title="Forward message" description="" />
+				<siteMapNode url="alvao-service-desk/requests/forward-request" title="Forward request" description="" />
+				<siteMapNode url="alvao-service-desk/requests/minutes-from-other-communications" title="Minutes from another communication" description="" />
+				<siteMapNode url="alvao-service-desk/requests/note" title="Write a note" description="" />
+				<siteMapNode url="alvao-service-desk/requests/state-change" title="Status change" description="" />
+				<siteMapNode url="alvao-service-desk/requests/resolve-request" title="Request resolution" description="" />
+				<siteMapNode url="alvao-service-desk/requests/close-request" title="Request closure" description="" />
+				<siteMapNode url="alvao-service-desk/requests/reopen-for-further-resolution" title="Reopen request for resolution" description="" />
+				<siteMapNode url="alvao-service-desk/requests/import-messages-from-outlook" title="Retrieving a message from the requester from MS Outlook" description="" />
+				<siteMapNode url="alvao-service-desk/requests/return-to-operator" title="Return request to operator" description="" />
+				<siteMapNode url="alvao-service-desk/requests/internal-records" title="Internal records" description="" />
+				<siteMapNode url="alvao-service-desk/requests/wait-for-response" title="Waiting for requester" description="" />
+				<siteMapNode url="alvao-service-desk/requests/important-communication" title="Important communication" description="" />
+				<siteMapNode url="alvao-service-desk/requests/work-time" title="Time reporting" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-service-desk/requests/subscribers" title="Request tracking" description="" />
+			<siteMapNode url="alvao-service-desk/requests/duplicate-requests" title="Duplicate requests" description="" />
+			<siteMapNode url="alvao-service-desk/requests/request-approval" title="Request Approval" description="" />
+			<siteMapNode url="alvao-service-desk/requests/request-removal" title="Removing a request" description="" />
+			<siteMapNode url="alvao-service-desk/requests/move-to-another-service" title="Moving a request to another service" description="" />
+			<siteMapNode url="alvao-service-desk/requests/find-in-alvao-asset" title="Finding objects in ALVAO Asset Management" description="" />
+			<siteMapNode url="alvao-service-desk/requests/ticket-templates" title="Request templates" description=""/>
+			<siteMapNode url="alvao-service-desk/requests/unread-events" title="Unread events" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-service-desk/request-object-links" title="Links between requests and objects" description="" />
+		<siteMapNode url="alvao-service-desk/news" title="Current news" description="">
+		</siteMapNode>
+		<siteMapNode url="alvao-service-desk/knowledge-base" title="Knowledge base" description="">
+		</siteMapNode>
+		<siteMapNode url="alvao-service-desk/evaluation-of-system-operation" title="Searching, reporting and data analysis" description="">
+			<siteMapNode url="alvao-service-desk/evaluation-of-system-operation/data-analysis" title="Data analysis (Excel workbook)" description="" />
+			<siteMapNode url="alvao-service-desk/evaluation-of-system-operation/power-bi" title="Power BI report templates" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-service-desk/license" translate="no" title="Attachment 1: License Agreement" description="" />
+	</siteMapNode>
+</siteMap>

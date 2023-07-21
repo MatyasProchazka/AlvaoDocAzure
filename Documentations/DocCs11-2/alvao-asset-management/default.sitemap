@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="alvao-asset-management" title="ALVAO Asset Management" description="">
+		<siteMapNode url="alvao-asset-management/implementation" title="Implementace systému v organizaci" description="">
+			<siteMapNode url="alvao-asset-management/implementation/architecture" title="Architektura systému" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/requirements" title="Technické požadavky" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/supported-languages" title="Podporované jazyky" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/installation" title="Instalace" description="" >
+				<siteMapNode url="alvao-asset-management/implementation/installation/installation-server-manual" title="ALVAO Server - ruční instalace" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/database-deploy" title="DatabaseDeploy" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/gp-distribution" title="Distribuce balíčku msi prostřednictvím zásad skupiny" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/msi-distribution" title="Distribuce balíčku msi prostřednictvím SCCM" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/own-iis-apppool" title="Konfigurace serveru IIS a vytvoření fondu aplikací" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/web-service" title="Oddělená instalace aplikací ALVAO WebApp a AM Collector na různé servery" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/multitenant" title="Multitenantní režim" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/maintenance" title="Optimalizace výkonu databáze" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/installation/connection-string-samples" title="Příklady řetězců připojení" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/database-backup" title="Zálohování databáze" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/users" title="Správa uživatelů" description="">
+				<siteMapNode url="alvao-asset-management/implementation/users/authentication" title="Ověřování uživatelů v aplikacích" description="">
+					<siteMapNode url="alvao-asset-management/implementation/users/authentication/aad" title="Ověřování v Azure Active Directory" description="" >
+						<siteMapNode url="alvao-asset-management/implementation/users/authentication/aad/provisioning/person-attribute-mapping" title="Mapování atributů SCIM na položky uživatele" description="" />
+						<siteMapNode url="alvao-asset-management/implementation/users/authentication/aad/provisioning/object-attribute-mapping" title="Mapování atributů v SCIM na vlastnosti objektu" description="" />
+					</siteMapNode>
+					<siteMapNode url="alvao-asset-management/implementation/users/authentication/ad" title="Ověřování Active Directory" description="" >
+						<siteMapNode url="alvao-asset-management/implementation/users/authentication/ad/import-ad" title="ImportAD utility" description="">
+							<siteMapNode url="alvao-asset-management/implementation/users/authentication/ad/ad-object-property-mapping" title="Mapování atributů Active Directory na vlastnosti objektů" description="" />
+							<siteMapNode url="alvao-asset-management/implementation/users/authentication/ad/name-template" title="Šablona jmen uživatelů" description="" />
+							<siteMapNode url="alvao-asset-management/implementation/users/authentication/ad/ad-trusted-domains" title="Nastavení seznamu důvěryhodných domén" description="" />
+						</siteMapNode>
+					</siteMapNode>
+					<siteMapNode url="alvao-asset-management/implementation/users/authentication/alvao" title="Ověřování Alvao" description="" >
+						<siteMapNode url="alvao-asset-management/implementation/users/authentication/alvao/import-users-csv" title="Import uživatelů z CSV" description="" />
+					</siteMapNode>
+				</siteMapNode>
+				<siteMapNode url="alvao-asset-management/implementation/users/groups" title="Skupiny uživatelů" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/users/permissions" title="Oprávnění uživatelů" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/users/default-profile" title="Vlastní výchozí nastavení uživatele" description="" />
+                <siteMapNode url="alvao-asset-management/implementation/users/start-chat-in-ms-teams" title="Spustit chat v MS Teams" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/users/security-audit" title="Audit změn uživatelských oprávnění" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/computer-set-template" title="Šablona počítačové sestavy" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/tree-design" title="Návrh stromové struktury" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/object-property-change-type" title="Změna vlastnosti typu Text na jiný typ" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/insert-computers" title="Vložení počítačů do evidence" description="">
+				<siteMapNode url="alvao-asset-management/implementation/exceeded-license" title="Překročení licence ALVAO Asset Management" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/detection" title="Detekce hardware a software" description="">
+				<siteMapNode url="alvao-asset-management/implementation/detection/detection-way" title="Výběr způsobu detekce" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/detection/custom-detection-way" title="Vlastní způsob detekce" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/detection/firewall" title="Nastavení brány firewall" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/detection/agent" title="Agent" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/detection/collector" title="Collector" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/detection/blacklist-hw" title="Blacklist HW" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/object-templates" title="Šablony objektů" description="">
+				<siteMapNode url="alvao-asset-management/implementation/object-properties" title="Definice vlastností" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/object-models" title="Vzory objektů" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/node-class" title="Druhy objektů" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/commands" title="Příkazy" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/settings" title="Globální nastavení" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/periodic-alerts" title="Pravidelná upozornění" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/maintenance-reports" title="Reporty údržby" description="">
+				<siteMapNode url="alvao-asset-management/implementation/maintenance-reports/installation" title="Instalace reportů v Microsoft SQL Server Reporting Services" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/implementation/monitoring-app-health" title="Sledování stavu aplikace" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/property-categories" title="Kategorie vlastností" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/statistics" title="Analýza návštěvnosti ALVAO WebApp" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/analytic-database" title="Analytická databáze" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/recaptcha" title="Zapnutí reCAPTCHA" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/audit-log" title="Protokol změn v nastavení" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/multi-languages" title="Vícejazyčné prostředí" description="" />
+			<siteMapNode url="alvao-asset-management/implementation/customization" title="Vlastní úpravy a rozšíření" description="">
+				<siteMapNode url="alvao-asset-management/implementation/customization/reports" title="Šablony tiskových sestav" description="" >
+					<siteMapNode url="alvao-asset-management/implementation/customization/reports/rep-modify" title="Úprava šablon tiskových sestav REP" description="">
+						<siteMapNode url="alvao-asset-management/implementation/customization/reports/rep" title="Šablony tiskových sestav REP" description="" />
+					</siteMapNode>
+					<siteMapNode url="alvao-asset-management/implementation/customization/reports/html" title="Šablony tiskových sestav HTML" description="" />
+				</siteMapNode>
+				<siteMapNode url="alvao-asset-management/implementation/customization/scripting" title="Vlastní skript" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/customization/database" title="Databáze Alvao" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/customization/xml-export-objects" title="Popis XML exportu objektů" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/customization/new-ticket-custom-form" title="Vlastní formulář pro podání požadavku z AM Console" description="" />
+				<siteMapNode url="alvao-asset-management/implementation/customization/alvao-api" title="Rozhraní Alvao.API" description="" />
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/console" title="ALVAO Asset Management Console" description="" />
+		<siteMapNode url="alvao-asset-management/webApp" title="ALVAO WebApp" description="" />
+		<siteMapNode url="alvao-asset-management/working-with-tables" title="Práce s tabulkami" description="">
+			<siteMapNode url="alvao-asset-management/working-with-tables/sorting" title="Řazení hodnot" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/removing-values" title="Odstranění hodnot" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/tables-searching" title="Vyhledání hodnot" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/tables-filtering" title="Filtr" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/column-width-and-visibility" title="Šířka a viditelnost sloupců" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/column-order" title="Pořadí sloupců" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/table-views" title="Pohledy" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/grouping" title="Seskupování" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/redraw-table" title="Překreslení tabulky" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/table-exporting-and-printing" title="Export a tisk tabulky" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/backup-profile" title="Záloha a obnova nastavení tabulek" description="" />
+			<siteMapNode url="alvao-asset-management/working-with-tables/shortcuts" title="Klávesové zkratky" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/objects-and-properties" title="Objekty a vlastnosti" description="">
+			<siteMapNode url="alvao-asset-management/objects-and-properties/inserting-object-in-tree" title="Přidání objektu do stromu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/object-title" title="Název objektu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/object-properties" title="Upravit vlastnosti objektu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/moving-object" title="Přesun objektu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/removing-object" title="Odstranění objektu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/property-inheritance" title="Dědičnost" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/copying-object" title="Vytvoření kopie objektu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/stock-property" title="Naskladnění majetku" description=""/>
+			<siteMapNode url="alvao-asset-management/objects-and-properties/scrapped-asset" title="	Evidence vyřazeného majetku" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/material-warehouse" title="Sklad spotřebního materiálu" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/object-access-rights" title="Zabezpečení objektů" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/property-security" title="Zabezpečení vlastností" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/functions" title="Funkce" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/setting-up-new-sequence" title="Nastavení nové číselné řady pro generování hodnoty vlastnosti" description="" />
+			<siteMapNode url="alvao-asset-management/objects-and-properties/additional-props-at-child-object-tab" title="Zobrazení dalších sloupců (vlastností) na záložce &quot;Objekty&quot;" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/object-log" title="Historie objektů" description="" />
+		<siteMapNode url="alvao-asset-management/object-notes" title="Poznámky k objektům" description="" />
+
+		<siteMapNode url="alvao-asset-management/documents" title="Dokumenty" description="">
+			<siteMapNode url="alvao-asset-management/documents/sequences" title="Číselné řady" description="" />
+			<siteMapNode url="alvao-asset-management/documents/invoices" title="Faktury" description="" />
+			<siteMapNode url="alvao-asset-management/documents/transfer-protocols" title="Předávací protokoly" description="" />
+			<siteMapNode url="alvao-asset-management/documents/links-between-objects-and-documents" title="Vazba dokumentu na objekt" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/software-management" title="Správa software" description="">
+			<siteMapNode url="alvao-asset-management/software-management/software-detection" title="Detekce software" description="" />
+			<siteMapNode url="alvao-asset-management/software-management/product-state" title="Stav produktů" description="" />
+			<siteMapNode url="alvao-asset-management/software-management/licenses" title="Evidence licencí" description="" >
+				<siteMapNode url="alvao-asset-management/software-management/licenses/new" title="Nová licence" description="" />
+				<siteMapNode url="alvao-asset-management/software-management/licenses/maintenance" title="Prodloužení podpory (maintenance)" description="" />
+				<siteMapNode url="alvao-asset-management/software-management/licenses/increase-decrease" title="Navýšení/snížení počtu licencí" description="" />
+				<siteMapNode url="alvao-asset-management/software-management/licenses/downgrade" title="Umožnit downgrade" description="" />
+        <siteMapNode url="alvao-asset-management/software-management/licenses/import-from-m365" title="Importovat z M365" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/software-management/licenses-software-audit" title="Licenční audit software" description="">
+				<siteMapNode url="alvao-asset-management/software-management/import-lic" title="Import licencí" description="" />
+				<siteMapNode url="alvao-asset-management/software-management/software-regular-auditing" title=" Pravidelná kontrola licenční čistoty" description="" />
+				<siteMapNode url="alvao-asset-management/software-management/licenses-links" title="Vazby mezi licencemi" description="" />
+			</siteMapNode>
+			<siteMapNode url="alvao-asset-management/software-management/software-profiles" title="Softwarové profily" description="" />
+			<siteMapNode url="alvao-asset-management/software-management/custom-swlib" title="Vlastní knihovna softwarových produktů" description="" />
+			<siteMapNode url="alvao-asset-management/software-management/usage" title="Využití software" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/contract-management" title="Evidence smluv" description=""/>
+		<siteMapNode url="alvao-asset-management/searching" title="Vyhledávání, reporting a analýza dat" description="">
+			<siteMapNode url="alvao-asset-management/searching/looking-up-objects" title="Vyhledávání objektů" description="" />
+			<siteMapNode url="alvao-asset-management/searching/list-of-objects" title="Seznamy objektů" description="" />
+			<siteMapNode url="alvao-asset-management/searching/query" title="Dotazy" description="" />
+			<siteMapNode url="alvao-asset-management/searching/data-analysis" title="Datová analýza(sešit Excelu)" description="" />
+			<siteMapNode url="alvao-asset-management/searching/power-bi" title="Šablony sestav Power BI" description="" />
+			<siteMapNode url="alvao-asset-management/searching/database-sql" title="SQL dotaz a databázový skript" description="">
+				<siteMapNode url="alvao-asset-management/searching/database-sql/samples" title="Příklady SQL dotazů" description="" />
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/import-export-data" title="Import/export dat" description="">
+			<siteMapNode url="alvao-asset-management/import-export-data/import-util" title="ImportUtil" description="" />
+			<siteMapNode url="alvao-asset-management/import-export-data/export-util" title="ExportUtil" description="" />
+		</siteMapNode>
+		<siteMapNode url="alvao-asset-management/glossary" title="Slovník" description="" />
+		<siteMapNode url="alvao-asset-management/license" title="Licenční ujednání" description=""/>
+	</siteMapNode>
+</siteMap>
