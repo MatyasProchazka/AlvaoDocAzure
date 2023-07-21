@@ -19,6 +19,7 @@ namespace AlvaoDocAzure
         private readonly IConfigurationRoot? configuration;
         private readonly ArticleParser parser;
         private string language;
+        private string projectDirectory;
 
         public DatabaseMongoDB(string collectionName, string language) 
         {
@@ -33,6 +34,8 @@ namespace AlvaoDocAzure
             parser = new ArticleParser();
             this.collectionName = collectionName;
             this.language = language;
+            string workingDirectory = Environment.CurrentDirectory;
+            projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
         }
 
         public async Task CreateVectorIndexAsync()
@@ -71,7 +74,7 @@ namespace AlvaoDocAzure
         {
             try
             {
-                List<string> files = FileManager.GetAllAspxFiles($@"C:\Users\matya\Programming\AlvaoDocAzure\Documentations\{collectionName}");
+                List<string> files = FileManager.GetAllAspxFiles($@"{projectDirectory}/Documentations/{collectionName}");
                 List<Article> articles = new List<Article>();
 
                 parser.Files = files;
@@ -158,12 +161,11 @@ namespace AlvaoDocAzure
             return estimatedTime;
         }
 
-        public async Task AnswerQuestion(bool useOpenAI)
+        public async Task AnswerQuestion(bool useOpenAI, bool useVoice)
         {
             string previousAnswer = "";
             string answer = "";
             bool askQuestion = true;
-            bool useVoice = true;
             string question = "";
 
             string speechKey = "92eb8fd7302f4e1d83c568eabc5d1d83";
