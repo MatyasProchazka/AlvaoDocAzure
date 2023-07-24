@@ -19,9 +19,9 @@ namespace AlvaoDocAzure
         private readonly IConfigurationRoot? configuration;
         private readonly ArticleParser parser;
         private string language;
-        private string projectDirectory;
+        private string? projectDirectory;
 
-        public DatabaseMongoDB(string collectionName, string language) 
+        public DatabaseMongoDB(string collectionName) 
         {
             configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -33,9 +33,23 @@ namespace AlvaoDocAzure
             chatBot = new Chatbot();
             parser = new ArticleParser();
             this.collectionName = collectionName;
-            this.language = language;
-            string workingDirectory = Environment.CurrentDirectory;
+            string? workingDirectory = Environment.CurrentDirectory;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+
+            if (collectionName.Contains("En"))
+            {
+                this.language = "en";
+            }
+            else if (collectionName.Contains("Cs"))
+            {
+                this.language = "cs";
+            }
+            else
+            {
+                throw new Exception("Incorrect folder name. Provide a file as an example shows: Doc<language><version>");
+            }
         }
 
         public async Task CreateVectorIndexAsync()
@@ -129,22 +143,34 @@ namespace AlvaoDocAzure
 
         public async Task<List<BsonDocument>> MakeVectorSearchAsync(string question)
         {
-            string vectorizedQuestion = await chatBot.CreateVectorEmbeddingsAsync(question);
+            try
+            {
+                string vectorizedQuestion = await chatBot.CreateVectorEmbeddingsAsync(question);
 
-            BsonDocument[] pipeline = new BsonDocument[]
-                {
+                BsonDocument[] pipeline = new BsonDocument[]
+                    {
                     BsonDocument.Parse($"{{$search: {{cosmosSearch: {{ vector: {vectorizedQuestion}, path: 'Vectors', k: 3}}, returnStoredSource:true}}}}"),
-                };
+                    };
 
 
-            // Return results, combine into a single string
-            List<BsonDocument> bsonDocuments = await database.GetCollection<BsonDocument>(collectionName).Aggregate<BsonDocument>(pipeline).ToListAsync();
-            return bsonDocuments;
+                // Return results, combine into a single string
+                List<BsonDocument> bsonDocuments = await database.GetCollection<BsonDocument>(collectionName).Aggregate<BsonDocument>(pipeline).ToListAsync();
+                return bsonDocuments;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return new List<BsonDocument>();
+            }
+            
         }
 
-        public async Task DropDatabaseAsync ()
+        public async Task DropCollectionAsync ()
         {
-            await client.DropDatabaseAsync(databaseName);
+            BsonDocumentCommand<BsonDocument> commandDrop = new BsonDocumentCommand<BsonDocument>(
+                        BsonDocument.Parse($"{{drop: '{collectionName}'}}"));
+            var result = await client.GetDatabase(databaseName).RunCommandAsync(commandDrop);
+            await Console.Out.WriteLineAsync(result.AsString);
         }
 
         public async Task GetNumberOfDocumentsAsync()
@@ -161,12 +187,14 @@ namespace AlvaoDocAzure
             return estimatedTime;
         }
 
-        public async Task AnswerQuestion(bool useOpenAI, bool useVoice)
+        public async Task AnswerQuestionAsync()
         {
             string previousAnswer = "";
             string answer = "";
             bool askQuestion = true;
-            string question = "";
+            string? question = "";
+            bool useOpenAI = false;
+            bool useVoice = false;
 
             string speechKey = "92eb8fd7302f4e1d83c568eabc5d1d83";
             string speechRegion = "westeurope";
@@ -177,55 +205,98 @@ namespace AlvaoDocAzure
             using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
             using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
 
-            while (askQuestion)
+            if (language == "en")
             {
-                if (language == "en") { Console.WriteLine("Question:"); }
-                else if (language == "cs") { Console.WriteLine("Otázka:"); }
-                
+                Console.WriteLine("Do you want to use OpenAi completions? (y/n)");
+                string? useCompletionsQuestion = Console.ReadLine();
+                if (useCompletionsQuestion != null && useCompletionsQuestion == "y")
+                {
+                    useOpenAI = true;
+                }
+                Console.WriteLine("Do you want to insert the question using your voice? (y/n)");
+                string? useVoiceQuestion = Console.ReadLine();
+                if (useVoiceQuestion != null && useVoiceQuestion == "y")
+                {
+                    useVoice = true;
+                }
+                await Console.Out.WriteLineAsync("To exit the chat, write 'exit'. Press any key to continue to the chat.");
+                Console.ReadKey();
+            }
+            else if (language == "cs")
+            {
+                Console.WriteLine("Chcete použít OpenAI Completions? (a/n)");
+                string? useCompletionsQuestion = Console.ReadLine();
+                if (useCompletionsQuestion != null && useCompletionsQuestion == "a")
+                {
+                    useOpenAI = true;
+                }
+                Console.WriteLine("Chcete vložit otázku použitím vašeho hlasu? (a/n)");
+                string? useVoiceQuestion = Console.ReadLine();
+                if (useVoiceQuestion != null && useVoiceQuestion == "a")
+                {
+                    useVoice = true;
+                }
+                await Console.Out.WriteLineAsync("Pro odejití z chatu napište 'exit'. Press any key to continue to the chat.");
+                Console.ReadKey();
+            }
+            Console.Clear();
+            while (askQuestion)
+            {   
                 if (useVoice)
                 {
-                    Console.WriteLine("Speak into your microphone.");
+                    if (language == "en") { Console.WriteLine("Speak into your microphone."); }
+                    if (language == "cs") { Console.WriteLine("Mluvte do mikrofonu."); }
                     var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
                     question = OutputSpeechRecognitionResult(speechRecognitionResult);
                     Console.WriteLine(question);
                 }
                 else
                 {
+                    if (language == "en") { Console.WriteLine("Question:"); }
+                    if (language == "cs") { Console.WriteLine("Otázka:"); }
                     question = Console.ReadLine();
                 }
                 
-                if (question != null && question != "quit")
+                if (question != null && question != "exit")
                 {
-                    var answers = await MakeVectorSearchAsync(question);
 
-                    if (useOpenAI)
+                    try
                     {
-                        if (language == "en")
+                        var answers = await MakeVectorSearchAsync(question);
+
+                        if (useOpenAI)
                         {
-                            answer = await chatBot.CreateAnswerBasedOnContextEnAsync(answers, question, previousAnswer);
-                        }
-                        else if (language == "cs")
-                        {
-                            answer = await chatBot.CreateAnswerBasedOnContextCsAsync(answers, question, previousAnswer);
-                        }
-                        Console.WriteLine("------------------");
-                        Console.WriteLine(answer);
-                        previousAnswer = answer;
-                    }
-                    else
-                    {
-                        Console.WriteLine("------------------");
-                        Console.WriteLine(question);
-                        Console.WriteLine("------------------");
-                        foreach (var singleAnswer in answers)
-                        {
-                            Console.WriteLine(singleAnswer["Header"]);
-                            Console.WriteLine(singleAnswer["Content"]);
-                            Console.WriteLine(singleAnswer["Link"]);
+                            if (language == "en")
+                            {
+                                answer = await chatBot.CreateAnswerBasedOnContextEnAsync(answers, question, previousAnswer);
+                            }
+                            else if (language == "cs")
+                            {
+                                answer = await chatBot.CreateAnswerBasedOnContextCsAsync(answers, question, previousAnswer);
+                            }
                             Console.WriteLine("------------------");
+                            Console.WriteLine(answer);
+                            previousAnswer = answer;
                         }
+                        else
+                        {
+                            Console.WriteLine("------------------");
+                            Console.WriteLine(question);
+                            Console.WriteLine("------------------");
+                            foreach (var singleAnswer in answers)
+                            {
+                                Console.WriteLine(singleAnswer["Header"]);
+                                Console.WriteLine(singleAnswer["Content"]);
+                                Console.WriteLine(singleAnswer["Link"]);
+                                Console.WriteLine("------------------");
+                            }
+                        }
+                        if (useVoice) { Console.ReadKey(); }
                     }
-                    if (useVoice) { Console.ReadKey(); }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
                 else
                 {

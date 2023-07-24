@@ -115,6 +115,7 @@ Summarize an answer that answers the question below based on the 3 texts of info
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                System.Environment.Exit(401);
                 return String.Empty;
             }
             
@@ -170,12 +171,21 @@ Shrňte odpověď, která odpovídá na níže uvedenou otázku na základě 3 i
 
         public async Task<string> CreateVectorEmbeddingsAsync(string articleText)
         {
-            var options = new EmbeddingsOptions(articleText);
+            try
+            {
+                var options = new EmbeddingsOptions(articleText);
 
-            var result_calling = await client.GetEmbeddingsAsync("text-embedding-ada-002", options);
-            var result = result_calling.Value.Data[0].Embedding;
-            var vector_list = JsonSerializer.Serialize(result);
-            return vector_list;
+                var result_calling = await client.GetEmbeddingsAsync("text-embedding-ada-002", options);
+                var result = result_calling.Value.Data[0].Embedding;
+                var vector_list = JsonSerializer.Serialize(result);
+                return vector_list;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                System.Environment.Exit(401);
+                return String.Empty;
+            }
         }
     }
 }
