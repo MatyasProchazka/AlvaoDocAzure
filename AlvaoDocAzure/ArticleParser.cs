@@ -11,7 +11,7 @@ namespace AlvaoDocAzure
         /// <summary>
         /// list of all the .aspx files in the given directory
         /// </summary>
-        public List<string> Files { get; set; }
+        public List<string>? Files { get; set; }
 
         /// <summary>
         /// instance of HtmlDocument class used for loading the file and reading the node
@@ -21,20 +21,20 @@ namespace AlvaoDocAzure
         /// <summary>
         /// the first "<h2>" header in the file, used only in the beginning
         /// </summary>
-        private HtmlNode firstNode;
+        private HtmlNode? firstNode;
 
         /// <summary>
         /// the node that is currently in use
         /// </summary>
-        private HtmlNode node;
+        private HtmlNode? node;
 
-        private string firstHeader;
+        private string? firstHeader;
         private int articleNumber = 1;
         private int subArticleNumber = 1;
 
-        public ArticleParser(List<string> files = null)
+        public ArticleParser()
         {
-            this.Files = files;
+            
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace AlvaoDocAzure
         public List<Article> Parse()
         {
             //list of all the separate articles from all .aspx files
-            List<Article> result = new List<Article>();
+            List<Article>? result = new List<Article>();
             //cycle through the files and find all articles in the given file
             foreach (var file in Files)
             {
@@ -92,7 +92,7 @@ namespace AlvaoDocAzure
                 if (ParserInicialization(file))
                 {
                     //find all the articles in the file and add them to the result list
-                    List<Article> temp = FindArticle(file);
+                    List<Article>? temp = FindArticle(file);
                     articleNumber++;
                     subArticleNumber = 1;
                     result.AddRange(temp);
@@ -112,10 +112,10 @@ namespace AlvaoDocAzure
             bool loop = true;
             bool innerLoop = true;
             //list containing separate articles found in the file
-            List<Article> articles = new List<Article>();
+            List<Article>? articles = new List<Article>();
             //the current article + adds the text from the h2 tag
-            string header = firstNode.InnerText;
-            string article = "";
+            string? header = firstNode.InnerText;
+            string? article = "";
             //loop that goes through the whole file
             while (loop)
             {
@@ -135,7 +135,7 @@ namespace AlvaoDocAzure
                             if (node.OuterHtml.Contains("<p") || node.OuterHtml.Contains("<ul") || node.OuterHtml.Contains("<ol") || node.OuterHtml.Contains("<table") || node.OuterHtml.Contains("<pre"))
                             {
                                 //adds the text that is formatted in the tag to the list
-                                article += FileManager.RemoveSpaces(FileManager.FormatParagraph(WebUtility.HtmlDecode(node.InnerText)));
+                                article += FileManager.RemoveSpaces(WebUtility.HtmlDecode(node.InnerText));
                             }
                             node = node.NextSibling;
                         }

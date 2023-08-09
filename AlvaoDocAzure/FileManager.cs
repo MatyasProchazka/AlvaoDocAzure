@@ -20,41 +20,6 @@ namespace AlvaoDocAzure
         }
 
         /// <summary>
-        /// gets rid of unwanted characters in the text
-        /// </summary>
-        /// <param name="paragraph"></param>
-        /// <returns>formatted text</returns>
-        public static string FormatParagraph(string paragraph)
-        {
-            //checks for  all the unwanted characters and replaces them
-            if (paragraph.Contains("&quot;"))
-            {
-                paragraph = paragraph.Replace("&quot;", "\"");
-            }
-            if (paragraph.Contains(@"\u0022"))
-            {
-                paragraph = paragraph.Replace(@"\u0022", "");
-            }
-            if (paragraph.Contains(@"\u0022"))
-            {
-                paragraph = paragraph.Replace(@"\u0027", " ");
-            }
-            if (paragraph.Contains(@"&lt"))
-            {
-                paragraph = paragraph.Replace(@"&lt", "<");
-            }
-            if (paragraph.Contains(@"&gt"))
-            {
-                paragraph = paragraph.Replace(@"&gt", ">");
-            }
-            if (paragraph.Contains(@"&#39"))
-            {
-                paragraph.Replace(@"&#39", "'");
-            }
-            return paragraph;
-        }
-
-        /// <summary>
         /// gets rid of unwanted spaces in the text
         /// </summary>
         /// <param name="text"></param>
@@ -111,25 +76,7 @@ namespace AlvaoDocAzure
 
                      System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
-            /*int nPrevLength;
 
-            do
-
-            {
-                nPrevLength = result.Length;
-
-                result = result.Replace("\r\r\r", "\r\r");
-
-                result = result.Replace("\t\t\t\t\t", "\t\t\t\t");
-
-                //breaks = breaks + "\r";
-
-                //tabs = tabs + "\t";
-            }
-
-            while (result.Length < nPrevLength);*/
-
-            text = text.Replace("\r", "");
             return text;
         }
     }

@@ -18,7 +18,6 @@ namespace AlvaoDocAzure
         [Option('d', "drop", Required = false, HelpText = "Drop a collection from database")]
         public bool DropCollection { get; set; }
         [Option('q', "question", Required = false, HelpText = "Ask a question")]
-        public bool AskQuestion { get; set; }
     }
 
     class Program
@@ -45,33 +44,12 @@ namespace AlvaoDocAzure
                     {
                         await db.DropCollectionAsync();
                     }
-                    if (options.AskQuestion)
-                    {
-                        await db.AnswerQuestionAsync();
-                    }
                 }
                 else
                 {
                     await Console.Out.WriteLineAsync("No given documentation name");
                 }
-                
-
             });
-
-            //await UseMongoDB(askQuestion: false, useOpenAI: false, useVoice: false, insertArticles: false, collectionName: "DocEn11-1", language: "en", readFromDatabase: true, dropDatabase: false);
-
-
-
-            //static async Task UseMongoDB(bool askQuestion = false, bool useOpenAI = false, bool useVoice = false, bool insertArticles =  false, string collectionName = "", string language = "", bool readFromDatabase = false, bool dropDatabase = false)
-            //{
-            //    DatabaseMongoDB db = new DatabaseMongoDB(collectionName, language);
-
-            //    if (insertArticles) { await db.InsertArticlesAsync(); }
-            //    if (readFromDatabase) { await db.ReadFromDatabaseAsync(); }
-            //    if (dropDatabase) { await db.DropDatabaseAsync(); }
-                
-            //    if (askQuestion) { await db.AnswerQuestion(useOpenAI, useVoice); }
-            //}
         }
 
         
