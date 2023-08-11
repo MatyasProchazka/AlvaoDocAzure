@@ -5,6 +5,7 @@ using Azure.Core;
 using MongoDB.Bson;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using ZstdSharp.Unsafe;
 
 namespace AlvaoDocAzure
@@ -44,8 +45,20 @@ namespace AlvaoDocAzure
 
                 string link = "";
 
-                if (collectionName.Contains("En")) { link = article.FileOrigin.Replace($@"C:\Users\matya\Programming\AlvaoDocAzure/Documentations/{collectionName}\", @"https://doc.alvao.com/en/11.1/"); }
-                else if (collectionName.Contains("Cs")) { link = article.FileOrigin.Replace($@"C:\Users\matya\Programming\AlvaoDocAzure/Documentations/{collectionName}\", @"https://doc.alvao.com/cs/11.1/"); }
+                string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+                string documentationDirectory = projectDirectory + "/" + "Documentations/";
+
+                string pattern = @"\d+-\d+"; // Matches the pattern "11-2"
+                string version = "";
+                Match match = Regex.Match(collectionName, pattern);
+                if (match.Success) 
+                { 
+                    version = match.Value;
+                    version = Regex.Replace(version, "-", ".");
+                }
+
+                if (collectionName.Contains("En")) { link = article.FileOrigin.Replace(documentationDirectory + collectionName + "\\", $@"https://doc.alvao.com/en/{version}/"); }
+                else if (collectionName.Contains("Cs")) { link = article.FileOrigin.Replace(documentationDirectory + collectionName + "\\", $@"https://doc.alvao.com/cs/{version}/"); }
                 else { throw new Exception("Wrong language type");}
                 link = link.Replace(@"\", "/");
                 link = link.Replace(".aspx", "");

@@ -17,7 +17,6 @@ namespace AlvaoDocAzure
         public bool ReadCollection { get; set; }
         [Option('d', "drop", Required = false, HelpText = "Drop a collection from database")]
         public bool DropCollection { get; set; }
-        [Option('q', "question", Required = false, HelpText = "Ask a question")]
     }
 
     class Program
