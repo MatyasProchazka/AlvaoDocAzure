@@ -11,12 +11,22 @@ namespace AlvaoDocAzure
 
         public static List<string> GetAllAspxFiles(string path)
         {
-            List<string> files = new List<string>();
-            foreach (string file in Directory.EnumerateFiles(path, "*.aspx", SearchOption.AllDirectories))
+            try
             {
-                files.Add(file);
+                List<string> files = new List<string>();
+                foreach (string file in Directory.EnumerateFiles(path, "*.aspx", SearchOption.AllDirectories))
+                {
+                    files.Add(file);
+                }
+                return files;
             }
-            return files;
+            catch
+            {
+                Console.WriteLine("Documentation with this name couldn't be found in the documentations folder. Please check if you provided the correct name");
+                System.Environment.Exit(404);
+                return new List<string>();
+            }
+           
         }
 
         /// <summary>

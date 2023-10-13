@@ -3,6 +3,8 @@ using Azure;
 using Azure.AI.OpenAI;
 using Azure.Core;
 using MongoDB.Bson;
+using System.Collections;
+using System;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -27,82 +29,39 @@ namespace AlvaoDocAzure
                 Mode = RetryMode.Exponential
             }
             };
-             client = new OpenAIClient(new Uri("https://mp-openai-euw.openai.azure.com/"), new AzureKeyCredential("5a2be090818b4a20a0f2312e0659fb77"), options);
+             client = new OpenAIClient(new Uri("https://alvao-ai-uk.openai.azure.com/"), new AzureKeyCredential("97f0f647834f42d3867d2c9d635f624c"), options);
 
            
         }
 
-        
-        public async Task<VectorizedArticle> CreateEmbeddingsAsync(Article article, string collectionName)
+        public async Task<ArticleWithVector> GetEmbeddigsListAsync(Article article, int id)
         {
-            try
+            var options = new EmbeddingsOptions(article.ArticleText);
+
+            string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+            string documentationDirectory = projectDirectory + "/" + "Documentations/";
+            string link = article.FileOrigin.Replace(documentationDirectory + "DocEn11-1" + "\\", $@"https://doc.alvao.com/en/11.1/");
+            link = link.Replace(".aspx", "");
+            link = link.Replace(@"\", "/");
+
+            var result_calling = await client.GetEmbeddingsAsync("text-embedding-ada-002", options);
+            var result = result_calling.Value.Data[0].Embedding;
+            if (result != null)
             {
-                var options = new EmbeddingsOptions(string.Concat(article.Header, article.ArticleText));
-
-                var result_calling = await client.GetEmbeddingsAsync(deploymentNameEmbeddings, options);
-                var result = result_calling.Value.Data[0].Embedding;
-                var vector_list = JsonSerializer.Serialize(result);
-
-                string link = "";
-
-                string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
-                string documentationDirectory = projectDirectory + "/" + "Documentations/";
-
-                string pattern = @"\d+-\d+"; // Matches the pattern "11-2"
-                string version = "";
-                Match match = Regex.Match(collectionName, pattern);
-                if (match.Success) 
-                { 
-                    version = match.Value;
-                    version = Regex.Replace(version, "-", ".");
-                }
-
-                if (collectionName.Contains("En")) { link = article.FileOrigin.Replace(documentationDirectory + collectionName + "\\", $@"https://doc.alvao.com/en/{version}/"); }
-                else if (collectionName.Contains("Cs")) { link = article.FileOrigin.Replace(documentationDirectory + collectionName + "\\", $@"https://doc.alvao.com/cs/{version}/"); }
-                else { throw new Exception("Wrong language type");}
-                link = link.Replace(@"\", "/");
-                link = link.Replace(".aspx", "");
-
-                List<double>? vectors = JsonSerializer.Deserialize<List<double>>(vector_list, new JsonSerializerOptions
+                return new ArticleWithVector()
                 {
-                    Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter() },
-                });
-                string header = article.FirstHeader;
-                if (article.Header != article.FirstHeader)
-                {
-                    header += $" - {article.Header}";
-                }
-                if (vectors != null)
-                {
-                    return new VectorizedArticle(header, article.ArticleText, link, vectors);
-                }
-                return new VectorizedArticle();
+                    ArticleID = id.ToString(),
+                    ArticleHeader = article.Header,
+                    ArticleLink = link,
+                    ArticleContent = article.ArticleText,
+                    ContentVectors = result
+                };
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex);
-                System.Environment.Exit(1);
-                return new VectorizedArticle();
+                return null;
             }
-        }
-
-        public async Task<string> CreateVectorEmbeddingsAsync(string articleText)
-        {
-            try
-            {
-                var options = new EmbeddingsOptions(articleText);
-
-                var result_calling = await client.GetEmbeddingsAsync("text-embedding-ada-002", options);
-                var result = result_calling.Value.Data[0].Embedding;
-                var vector_list = JsonSerializer.Serialize(result);
-                return vector_list;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                System.Environment.Exit(1);
-                return String.Empty;
-            }
+           
         }
     }
 }

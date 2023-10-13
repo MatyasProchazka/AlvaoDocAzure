@@ -13,10 +13,8 @@ namespace AlvaoDocAzure
         public string? CollectionName { get; set; }
         [Option('i', "input", Required = false, HelpText = "Input a documentation folder into database")]
         public bool InputIntoDatabase { get; set; }
-        [Option('r', "read", Required = false, HelpText = "Read documents from database collection")]
-        public bool ReadCollection { get; set; }
-        [Option('d', "drop", Required = false, HelpText = "Drop a collection from database")]
-        public bool DropCollection { get; set; }
+        [Option('j', "json", Required = false, HelpText = "save a documentation folder as json")]
+        public bool SaveAsJSON{ get; set; }
     }
 
     class Program
@@ -25,23 +23,16 @@ namespace AlvaoDocAzure
         {
             Console.OutputEncoding = Encoding.UTF8;
 
+            
             await Parser.Default.ParseArguments<Options>(args).WithParsedAsync(async options =>
             {
                 //initialize object with given documentation name
                 if (options.CollectionName != null)
                 {
-                    DatabaseMongoDB db = new DatabaseMongoDB(options.CollectionName);
+                    CognitiveService service = new CognitiveService("docen", options.CollectionName);
                     if (options.InputIntoDatabase)
                     {
-                        await db.InsertArticlesAsync();
-                    }
-                    if (options.ReadCollection)
-                    {
-                        await db.ReadFromDatabaseAsync();
-                    }
-                    if (options.DropCollection)
-                    {
-                        await db.DropCollectionAsync();
+                        await service.InsertDocumentsIntoIndex(options.SaveAsJSON);
                     }
                 }
                 else

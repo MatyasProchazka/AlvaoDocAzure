@@ -85,6 +85,7 @@ namespace AlvaoDocAzure
         {
             //list of all the separate articles from all .aspx files
             List<Article>? result = new List<Article>();
+            Console.WriteLine("started parsing");
             //cycle through the files and find all articles in the given file
             foreach (var file in Files)
             {
