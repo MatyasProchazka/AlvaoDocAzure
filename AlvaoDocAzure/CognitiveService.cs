@@ -123,7 +123,7 @@ namespace AlvaoDocAzure
             {
                 bool successInsertion = SaveArticlesIntoJSON(articlesDocuments);
                 if (successInsertion) { await Console.Out.WriteLineAsync("JSON saving successful"); } else { await Console.Out.WriteLineAsync("Saving JSON failed"); }
-                await UploadFromFileAsync();
+                await UploadFromFileAsync(articlesDocuments);
             }
 
 
@@ -148,7 +148,7 @@ namespace AlvaoDocAzure
 
         }
 
-        private async Task UploadFromFileAsync()
+        private async Task UploadFromFileAsync(ArticleWithVector[] vectorArray)
         {
 
             string connectionString = "DefaultEndpointsProtocol=https;AccountName=alvaodocstorage;AccountKey=xUF37Hlvxt8rCA6rxkWL8DOf/BZsx4mpZVvXOumIfZCkhfBTICwqVTaQMivyt5o9nzBc84l33Gd1+AStPW0D1A==";
@@ -160,8 +160,15 @@ namespace AlvaoDocAzure
             BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
             BlobClient blobClient = containerClient.GetBlobClient(blobName);
 
-            using FileStream stream = File.OpenRead(filePath);
-            await blobClient.UploadAsync(stream, true);
+            var json = JsonSerializer.Serialize(new List<ArticleWithVector>(vectorArray));
+
+            var bytes = System.Text.Encoding.UTF8.GetBytes(json);
+
+            var memStream = new MemoryStream(bytes);
+
+            //using FileStream stream = File.OpenRead(filePath);
+
+            await blobClient.UploadAsync(memStream, true);
 
         }
 

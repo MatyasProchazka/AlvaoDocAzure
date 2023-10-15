@@ -1,7 +1,8 @@
 {
   "profiles": {
     "AlvaoDocAzure": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "-n DocEn11-1 -i -j"
     }
   }
 }
