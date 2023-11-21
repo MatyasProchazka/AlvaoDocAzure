@@ -2,7 +2,7 @@
   "profiles": {
     "AlvaoDocAzure": {
       "commandName": "Project",
-      "commandLineArgs": "-n DocEn11-1 -i -j"
+      "commandLineArgs": "-n \"DOCEN\" -i \"C:\\Users\\matya\\Programming\\AlvaoDocAzure\\Documentations\\DocEn11-1\" -o \"C:\\Users\\matya\\Desktop\""
     }
   }
 }

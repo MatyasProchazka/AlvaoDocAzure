@@ -8,10 +8,11 @@ namespace AlvaoDocAzure.Models
 {
     internal class ArticleWithVector
     {
-        public string ArticleID { get; set; }
-        public string ArticleHeader { get; set; }
-        public string ArticleLink { get; set; }
-        public string ArticleContent { get; set; }
-        public IReadOnlyList<float> ContentVectors { get; set; }
+        public string Id { get; set; }
+        public string Header { get; set; }
+        public string FirstHeader { get; set; }
+        public string Link { get; set; }
+        public string Content { get; set; }
+        public IReadOnlyList<float> Vector { get; set; }
     }
 }

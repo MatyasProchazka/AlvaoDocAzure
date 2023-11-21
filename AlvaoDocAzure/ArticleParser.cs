@@ -3,6 +3,8 @@ using HtmlAgilityPack;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using AlvaoDocAzure.Models;
+using AlvaoDocAzure;
 
 namespace AlvaoDocAzure
 {
@@ -34,7 +36,7 @@ namespace AlvaoDocAzure
 
         public ArticleParser()
         {
-            
+
         }
 
         /// <summary>
@@ -84,8 +86,7 @@ namespace AlvaoDocAzure
         public List<Article> Parse()
         {
             //list of all the separate articles from all .aspx files
-            List<Article>? result = new List<Article>();
-            Console.WriteLine("started parsing");
+            var result = new List<Article>();
             //cycle through the files and find all articles in the given file
             foreach (var file in Files)
             {
@@ -93,7 +94,7 @@ namespace AlvaoDocAzure
                 if (ParserInicialization(file))
                 {
                     //find all the articles in the file and add them to the result list
-                    List<Article>? temp = FindArticle(file);
+                    var temp = GetArticle(file);
                     articleNumber++;
                     subArticleNumber = 1;
                     result.AddRange(temp);
@@ -107,16 +108,19 @@ namespace AlvaoDocAzure
         /// loops  through articles in the aspx file and ands them to a list
         /// </summary>
         /// <returns>list with the articles</returns>
-        public List<Article> FindArticle(string file)
+        public List<Article> GetArticle(string file)
         {
             // variables for the loops
             bool loop = true;
             bool innerLoop = true;
+
             //list containing separate articles found in the file
-            List<Article>? articles = new List<Article>();
+            var articles = new List<Article>();
+
             //the current article + adds the text from the h2 tag
             string? header = firstNode.InnerText;
             string? article = "";
+
             //loop that goes through the whole file
             while (loop)
             {
@@ -126,7 +130,7 @@ namespace AlvaoDocAzure
                     if (node != null)
                     {
                         //breaks the loop and add the article to the list
-                        if (node.OuterHtml.Contains("<h2>") || node.OuterHtml.Contains("<h3>") || node.OuterHtml.Contains("<h1>"))
+                        if (node.OuterHtml.Contains("<h2", StringComparison.InvariantCultureIgnoreCase) || node.OuterHtml.Contains("<h3>") || node.OuterHtml.Contains("<h1>"))
                         {
                             innerLoop = false;
                         }
@@ -188,6 +192,6 @@ namespace AlvaoDocAzure
         }
 
 
-        
+
     }
 }

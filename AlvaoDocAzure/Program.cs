@@ -9,12 +9,12 @@ namespace AlvaoDocAzure
 {
     class Options
     {
-        [Option('n', "name", Required = true, HelpText = "Name of the documentation/collection you want to manage")]
-        public string? CollectionName { get; set; }
-        [Option('i', "input", Required = false, HelpText = "Input a documentation folder into database")]
-        public bool InputIntoDatabase { get; set; }
-        [Option('j', "json", Required = false, HelpText = "save a documentation folder as json")]
-        public bool SaveAsJSON{ get; set; }
+        [Option('i', "input", Required = true, HelpText = "Path to the documentation you want to manage")]
+        public string? PathNameInput { get; set; }
+        [Option('o', "output", Required = true, HelpText = "Select the folder output path for the JSON file (e.g. C:\\Users\\<user>\\folder)")]
+        public string? PathNameOutput { get; set; }
+        [Option('n', "name", Required = true, HelpText = "Select output document name (e.g. DocEn11-2)")]
+        public string? OutputName { get; set; }
     }
 
     class Program
@@ -27,17 +27,14 @@ namespace AlvaoDocAzure
             await Parser.Default.ParseArguments<Options>(args).WithParsedAsync(async options =>
             {
                 //initialize object with given documentation name
-                if (options.CollectionName != null)
+                if (options.PathNameInput != null && options.OutputName != null && options.PathNameOutput != null)
                 {
-                    CognitiveService service = new CognitiveService("docen", options.CollectionName);
-                    if (options.InputIntoDatabase)
-                    {
-                        await service.InsertDocumentsIntoIndex(options.SaveAsJSON);
-                    }
+                    LogicHelper logic = new LogicHelper(options.OutputName, options.PathNameInput, options.PathNameOutput);
+                    await logic.SaveDocumentsJSONAsync();
                 }
                 else
                 {
-                    await Console.Out.WriteLineAsync("No given documentation name");
+                    Console.WriteLine("No given documentation name");
                 }
             });
         }
